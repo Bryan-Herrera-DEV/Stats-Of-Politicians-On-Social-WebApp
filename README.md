@@ -33,7 +33,7 @@ Here is an example of what it contains:
 
 ### Crawler (Python)
 
-Everyday, at 00:00 AM tz:UTC, it start a job with three main phases managed by ```Manager```.
+Everyday, at **00:00 AM tz:UTC**, it start a job with three main phases managed by ```Manager```.
 
 - **Reading**: it reads from the YML config file all the info mandatory to make stats. Precisely, it contains socials, countries and their respective political groups and accounts we want to analyze. 
 - **Fetching & Processing**: for each social and country, it retrieves data for each account for the day that just passed, and it puts them into an ```Account``` object (one for each account). Once made a list of accounts object, it instantiates a ```Group``` object. These objects make all the stats required for the last 24hrs.
