@@ -1,0 +1,53 @@
+version: '3'
+
+socials:
+  - twitter
+
+countries:
+  - ITA
+
+ITA_groups:
+  - group:
+      name: AVS
+      logo_color: '#3c782b'
+  - group:
+      name: M5S
+      logo_color: '#d2b42f'
+  - group:
+      name: PD
+      logo_color: '#be2a2a'
+  - group:
+      name: AZIONE-IV
+      logo_color: '#c77ca4'
+  - group:
+      name: FI
+      logo_color: '#48cff5'
+  - group:
+      name: LEGA
+      logo_color: '#2444a4'
+  - group:
+      name: FDI
+      logo_color: '#152145'
+
+ITA_twitter_accounts:
+  - account:
+      handle: NFratoianni
+      group: AVS
+  - account: 
+      handle: GiuseppeConteIT
+      group: M5S
+  - account: 
+      handle: ellyesse
+      group: PD
+  - account: 
+      handle: CarloCalenda
+      group: AZIONE-IV
+  - account: 
+      handle: berlusconi
+      group: FI
+  - account: 
+      handle: matteosalvinimi
+      group: LEGA
+  - account: 
+      handle: GiorgiaMeloni
+      group: FDI
