@@ -26,10 +26,7 @@ I use a YML file rather than a relational DB, because it is more easier to updat
 
 Here is an example of what it contains:
 
-```socials``` : _twitter_, _facebook_ <br/>
-```countries``` : _ITA_, _USA_ <br/>
-```ITA_groups``` : (_M5S, #aabbcc_), (_FDI, #112233_) <br/>
-```ITA_twitter_accounts``` : (_@GiuseppeConteIT, M5S_), (_@GiorgiaMeloni, FDI_)
+![YAML EXAMPLE](/docs/imgs/yaml.png)
 
 ### Crawler (Python)
 
