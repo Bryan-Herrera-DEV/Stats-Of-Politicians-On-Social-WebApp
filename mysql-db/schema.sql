@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS `political_groups` (
     `name` VARCHAR(32) NOT NULL,
     `country` VARCHAR(16) NOT NULL,
     `logo_color` VARCHAR(32) NOT NULL,
+    `last_update` DATE NOT NULL,
     PRIMARY KEY (`name`)
 );
 
