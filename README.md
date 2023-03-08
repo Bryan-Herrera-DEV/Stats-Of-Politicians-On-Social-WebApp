@@ -35,9 +35,9 @@ Here is an example of what it contains:
 
 Everyday, at 00:00 AM tz:UTC, it start a job with three main phases managed by ```Manager```.
 
-- **Reading**: it reads from the YML config file, all the info mandatory to make stats.
+- **Reading**: it reads from the YML config file all the info mandatory to make stats. Precisely, it contains socials, countries and their respective political groups and accounts we want to analyze. 
 - **Fetching & Processing**: for each social and country, it retrieves data for each account for the day that just passed, and it puts them into an ```Account``` object (one for each account). Once made a list of accounts object, it instantiates a ```Group``` object. These objects make all the stats required for the last 24hrs.
-- **Saving**: once made all accounts and politics group objects associated with a given country on a given social, the data are saved throught a ```Helper``` into a database. A relational database (MySQL) has been chosen.
+- **Saving**: once made all accounts and politics group objects associated with a given country on a given social, the data are saved throught a ```Helper``` into a database.
 
 Below is illustrated a semplified UML of the crawler. <br/>
 It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **Factory Method Design Pattern**. 
