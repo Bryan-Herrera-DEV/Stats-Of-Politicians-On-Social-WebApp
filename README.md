@@ -74,7 +74,7 @@ Below is illustrated a semplified UML of how the NodeJs server is organized. <br
     - Average Sentiment Analysis (Positive, Negative, Neutral, Null)
     - Chart with the Chronology of Followers Over Time (last week, last month, last year)
     - Chart with the Chronology of Avg Likes Over Time (last week, last month, last year)
-    - Top 10 Most Used Hashtags (just for accounts)
+    - Top 10 Most Used Hashtags (just for accounts) (today, last month, last year)
 
 
 ## Light Demo
