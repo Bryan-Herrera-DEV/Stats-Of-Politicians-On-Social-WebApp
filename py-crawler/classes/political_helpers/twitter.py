@@ -75,14 +75,16 @@ class TwitterHelper(Helper):
             }
         )
 
-    def __upsert_group_info(self, group):
+    def __upsert_group_info(self, group, date):
         self.__db.upsert('political_groups', {
                 'name': group.name,
                 'country': group.country,
-                'logo_color': group.color
+                'logo_color': group.color,
+                'last_update': date.strftime('%Y-%m-%d')
             }, {
                 'country': group.country,
-                'logo_color': group.color
+                'logo_color': group.color,
+                'last_update': date.strftime('%Y-%m-%d')
             }
         )
 
@@ -95,5 +97,5 @@ class TwitterHelper(Helper):
                 self.__insert_account_used_hashtag(account, date, hashtag)
 
     def insert_group(self, group, date):
-        self.__upsert_group_info(group)
+        self.__upsert_group_info(group, date)
         self.__insert_daily_group_insights(group, date)
