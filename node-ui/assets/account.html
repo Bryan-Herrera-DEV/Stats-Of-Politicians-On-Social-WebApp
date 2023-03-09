@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html translate="no">
+    <head>
+
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="Statistics of Politicians on Social Media."/>
+        <meta name="theme-color" content="#fed99b"/>
+        <meta name="author" content="Antonio Scardace">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/account.css">
+
+        <link rel="icon" type="image/png" sizes="32x32" href="imgs/logo.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="imgs/logo.png">
+
+		<title>Account Stats</title>
+
+    </head>
+    <body>
+
+        <section class="real-page">
+
+            <a href="/index.html"><img class="back" src="imgs/home.gif" alt="Back Home"/></a>
+
+            <section class="profile">
+                <p id="name"></p>
+                <div class="username">
+                    <a href="" target="_blank" id="handle"></a>
+                    <img id="verified" src="imgs/verified.png" hidden/>
+                </div>
+                <img id="profile_image"/>
+                <p id="created"></p>
+    
+                <div class="container metrics">
+                    <div class="col">
+                        <div class="metric odd">
+                            <p class="title">Total Followers</p>
+                            <p class="number" id="followers"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="metric even">
+                            <p class="title">Total Following</p>
+                            <p class="number" id="following"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="metric odd">
+                            <p class="title">Total Tweets</p>
+                            <p class="number" id="tweets"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="metric even">
+                            <p class="title">Analyzed Tweets Today</p>
+                            <p class="number" id="fetched"></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="block">
+                    <div class="text">
+                        <p id="description"></p>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="analytics">
+                <div class="container stats">
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Total Likes Today</p>
+                            <p class="number" id="tot_likes"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Total Retweets Today</p>
+                            <p class="number" id="tot_retweets"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Total Replies Today</p>
+                            <p class="number" id="tot_replies"></p>
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Avg Tweet Length Today</p>
+                            <p class="number" id="avg_length"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Avg Likes Today</p>
+                            <p class="number" id="avg_likes"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Avg Retweets Today</p>
+                            <p class="number" id="avg_retweets"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Avg Replies Today</p>
+                            <p class="number" id="avg_replies"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Avg Sentiment Today</p>
+                            <p class="number" id="avg_sentiment"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hashtags-rank">
+                    <h1>Top 10 Used Hashtags</h1>
+        
+                    <div class="container">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Top 10 - Today</h5>
+                                <ul id="hashtags_today"> </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Top 10 - Within this Month</h5>
+                                <ul id="hashtags_month"></ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Top 10 - Within this Year</h5>
+                                <ul id="hashtags_year"> </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts">
+                    <div class="lines">
+                        <canvas id="numTweetsWithinWeek" class="line-chart"></canvas>
+                        <canvas id="numTweetsWithinMonth" class="line-chart"></canvas>
+
+                        <canvas id="lensWithinWeek" class="line-chart"></canvas>
+                        <canvas id="lensWithinMonth" class="line-chart"></canvas>
+
+                        <canvas id="followersWithinWeek" class="line-chart"></canvas>
+                        <canvas id="followersWithinMonth" class="line-chart"></canvas>
+
+                        <canvas id="likesWithinWeek" class="line-chart"></canvas>
+                        <canvas id="likesWithinMonth" class="line-chart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/account.js"></script>
+        
+    </body>
+</html>
