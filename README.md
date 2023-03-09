@@ -72,8 +72,10 @@ Below is illustrated a semplified UML of how the NodeJs server is organized. <br
     - Average Replies
     - Average Length of a Tweet (in characters)
     - Average Sentiment Analysis (Positive, Negative, Neutral, Null)
-    - Chart with the Chronology of Followers Over Time (last week, last month, last year)
-    - Chart with the Chronology of Avg Likes Over Time (last week, last month, last year)
+    - Chart with the Chronology of Fetched Tweets Over Time (last week, last month)
+    - Chart with the Chronology of Avg Likes Over Time (last week, last month)
+    - Chart with the Chronology of Total Followers Over Time (last week, last month)
+    - Chart with the Chronology of Avg Tweet Length Over Time (last week, last month)
     - Top 10 Most Used Hashtags (just for accounts) (today, last month, last year)
 
 
