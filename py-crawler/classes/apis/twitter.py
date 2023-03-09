@@ -13,7 +13,7 @@ class TwitterApi:
 
     def __fetch_data(self, url):
         headers = { 'Authorization': "Bearer " + self.__bearer_token }
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, timeout=6)
         return response.json()
 
     def __get_user_tweets_within_time(self, id, start_time, end_time):
