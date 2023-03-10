@@ -34,6 +34,10 @@ class TwitterGroup(Group):
     def get_total_followers_count(self):
         frs = map((lambda account: account.followers_count), self.accounts)
         return reduce((lambda curr, sum: curr + sum), frs)
+    
+    def get_total_tweet_count(self):
+        tws = map((lambda account: account.tweet_count), self.accounts)
+        return reduce((lambda curr, sum: curr + sum), tws)
 
     def get_total_fetched_tweet_count(self):
         fts = map((lambda account: account.get_fetched_tweets_today()), self.accounts)
