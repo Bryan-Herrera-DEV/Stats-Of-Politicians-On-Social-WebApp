@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS `politics_stats`;
-CREATE DATABASE `politics_stats` CHARACTER SET UTF8mb4 COLLATE utf8mb4_bin;
+CREATE DATABASE `politics_stats`;
 USE `politics_stats`;
 
 CREATE TABLE IF NOT EXISTS `political_groups` (
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `twitter_accounts` (
     `created_on` VARCHAR(64) NOT NULL,
     `followers_count` INT(11) NOT NULL,
     `following_count` INT(11) NOT NULL,
-    `total_tweets_count` INT(11) NOT NULL,
+    `tot_tweets_count` INT(11) NOT NULL,
     `description` TEXT NOT NULL,
     `political_group` VARCHAR(32) NOT NULL,
     `last_update` DATE NOT NULL,
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `twitter_dailystats_group` (
     `tot_likes` INT(11) NOT NULL,
     `tot_retweets` INT(11) NOT NULL,
     `tot_replies` INT(11) NOT NULL,
-    `tot_tweets` INT(11) NOT NULL,
+    `tot_tweets_count` INT(11) NOT NULL,
     `avg_likes` DECIMAL(11, 2) NOT NULL,
     `avg_len` DECIMAL(11, 2) NOT NULL,
     `avg_retweets` DECIMAL(11, 2) NOT NULL,
