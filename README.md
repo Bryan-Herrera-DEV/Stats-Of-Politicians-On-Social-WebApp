@@ -113,6 +113,13 @@ So that the repository is successfully cloned and project run smoothly, a few st
    $ bash run.sh
 ``` 
 
+## Future Improvements
+
+- [ ] Add other countries in addition to Italy.
+- [ ] Add other socials (e.g. Instagram).
+- [ ] Add other NLP stats (e.g. Emotion Detection).
+- [ ] Re-implement front-end using Vue.js or similar.
+
 ## License :copyright:
 
 Author: [Antonio Scardace](https://antonioscardace.altervista.org/). <br/>
