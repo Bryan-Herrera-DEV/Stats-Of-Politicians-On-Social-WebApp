@@ -1,8 +1,8 @@
 docker compose down
-docker volume rm $(docker volume ls -q)
 
-docker compose build mysql
-docker compose build crawler
+docker compose build mysql-politics
+docker compose build py-crawler
 docker compose build node-ui
+docker compose build py-health
 
 docker compose up -d
