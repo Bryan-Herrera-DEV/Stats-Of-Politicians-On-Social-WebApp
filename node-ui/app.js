@@ -10,10 +10,8 @@ app.listen(8080, '0.0.0.0');
 
 
 const DateOperations = require('./classes/DateOperations');
+const Manager = require('./classes/Managers/Manager');
 const TwitterManager = require('./classes/Managers/TwitterManager');
-
-
-const exceptionMessage = (url, msg) => console.error(`Exception @ ${url} : ${msg}`);
 
 const since_mapper = {
     'w': DateOperations.goDaysBackFromNow(7),
@@ -24,136 +22,125 @@ const since_mapper = {
 
 
 app.get('/api/countries', async (req, res) => {
-    res.json(await TwitterManager.getCountries());
+    res.json(await Manager.getCountries());
 });
 
 app.get('/api/:country/groups', async (req, res) => {
     const { country } = req.params;
-    res.json(await TwitterManager.getGroups(country, DateOperations.getYesterday()));
+    res.json(await Manager.getGroups(country, DateOperations.getYesterday()));
 });
 
 
 
-app.get('/api/:country/:social/accounts', async (req, res) => {
-    const { country, social } = req.params;
+app.get('/api/:country/twitter/accounts', async (req, res) => {
+    const { country } = req.params;
+
+    accounts = await TwitterManager.getAccounts(country, DateOperations.getYesterday());
     
-    try {
-        res.json(await TwitterManager.getAccounts(country, DateOperations.getYesterday()));
-    }
-    catch(err) {
-        exceptionMessage(`/api/${country}/${social}/accounts`, err.message);
-        res.status(404).send({ message: 'Check your request parameters.' });
-    }
+    if (accounts == null)
+        return res.status(404).send({ message: 'Check your request parameters.' });
+
+    res.json(accounts);
 });
 
-app.get('/api/:social/accounts/:group/all', async (req, res) => {
-    const { social, group } = req.params;
+app.get('/api/twitter/accounts/:group/all', async (req, res) => {
+    const { group } = req.params;
 
-    try {
-        res.json(await TwitterManager.getAccountsByGroup(group, DateOperations.getYesterday()));
-    }
-    catch(err) {
-        exceptionMessage(`/api/${social}/accounts/${group}/all`, err.message);
-        res.status(404).send({ message: 'Check your request parameters.' });
-    }
+    accounts = await TwitterManager.getAccountsByGroup(group, DateOperations.getYesterday());
+    
+    if (accounts == null)
+        return res.status(404).send({ message: 'Check your request parameters.' });
+
+    res.json(accounts);
 });
 
+app.get('/api/twitter/accounts/:handle/info', async (req, res) => {
+    const { handle } = req.params;
 
+    info = await TwitterManager.getAccountInfo(handle, DateOperations.getYesterday());
+    
+    if (info == null)
+        return res.status(404).send({ message: 'Check your request parameters.' });
 
-app.get('/api/:social/accounts/:handle/info', async (req, res) => {
-    const { social, handle } = req.params;
-
-    try {
-        res.json(await TwitterManager.getAccountInfo(handle, DateOperations.getYesterday()));
-    }
-    catch(err) {
-        exceptionMessage(`/api/${social}/accounts/${handle}/info`, err.message);
-        res.status(404).send({ message: 'Check your request parameters.' });
-    }
+    res.json(info);
 });
 
-app.get('/api/:social/accounts/:handle/insights', async (req, res) => {
-    const { social, handle } = req.params;
+app.get('/api/twitter/accounts/:handle/insights', async (req, res) => {
+    const { handle } = req.params;
 
-    try {
-        res.json(await TwitterManager.getAccountInsights(handle, DateOperations.getYesterday()));
-    }
-    catch(err) {
-        exceptionMessage(`/api/${social}/accounts/${handle}/insights`, err.message);
-        res.status(404).send({ message: 'Check your request parameters.' });
-    }
+    insights = await TwitterManager.getAccountInsights(handle, DateOperations.getYesterday());
+    
+    if (insights == null)
+        return res.status(404).send({ message: 'Check your request parameters.' });
+
+    res.json(insights);
 });
 
-app.get('/api/:social/accounts/:handle/hashtags/:since/:limit', async (req, res) => {
-    const { social, handle, since, limit } = req.params;
+app.get('/api/twitter/accounts/:handle/hashtags/:since/:limit', async (req, res) => {
+    const { handle, since, limit } = req.params;
 
-    try {
-        res.json(await TwitterManager.getAccountHashtags(handle, since_mapper[since], limit));
-    }
-    catch(err) {
-        exceptionMessage(`/api/${social}/accounts/${handle}/hashtags/${since}/${limit}`, err.message);
-        res.status(404).send({ message: 'Check your request parameters.' });
-    }
+    hashtags = await TwitterManager.getAccountHashtags(handle, since_mapper[since], limit);
+    
+    if (hashtags == null)
+        return res.status(404).send({ message: 'Check your request parameters.' });
+
+    res.json(hashtags);
 });
 
-app.get('/api/:social/accounts/:handle/history/:operation/:since', async (req, res) => {
-    const { social, handle, operation, since } = req.params;
+app.get('/api/twitter/accounts/:handle/history/:operation/:since', async (req, res) => {
+    const { handle, operation, since } = req.params;
 
-    try {
-        if (operation == 'followers') res.json(await TwitterManager.getAccountFollowers(handle, since_mapper[since]));
-        else if (operation == 'likes') res.json(await TwitterManager.getAccountLikes(handle, since_mapper[since]));
-        else if (operation == 'retweets') res.json(await TwitterManager.getAccountRetweets(handle, since_mapper[since]));
-        else if (operation == 'replies') res.json(await TwitterManager.getAccountReplies(handle, since_mapper[since]));
-        else if (operation == 'lens') res.json(await TwitterManager.getAccountLengths(handle, since_mapper[since]));
-        else if (operation == 'fetched') res.json(await TwitterManager.getAccountFetchedTweets(handle, since_mapper[since]));
-        else res.json([]);
-    }
-    catch(err) {
-        exceptionMessage(`/api/${social}/accounts/${handle}/history/${operation}/${since}`, err.message);
-        res.status(404).send({ message: 'Check your request parameters.' });
-    }
+    if (operation == 'followers') history = await TwitterManager.getAccountFollowers(handle, since_mapper[since]);
+    else if (operation == 'likes') history = await TwitterManager.getAccountLikes(handle, since_mapper[since]);
+    else if (operation == 'retweets') history = await TwitterManager.getAccountRetweets(handle, since_mapper[since]);
+    else if (operation == 'replies') history = await TwitterManager.getAccountReplies(handle, since_mapper[since]);
+    else if (operation == 'lens') history = await TwitterManager.getAccountLengths(handle, since_mapper[since]);
+    else if (operation == 'fetched') history = await TwitterManager.getAccountFetchedTweets(handle, since_mapper[since]);
+    else history = null;
+
+    if (history == null)
+        return res.status(404).send({ message: 'Check your request parameters.' });
+
+    res.json(history);
 });
 
 
 
-app.get('/api/:social/groups/:group/info', async (req, res) => {
-    const { social, group } = req.params;
+app.get('/api/twitter/groups/:group/info', async (req, res) => {
+    const { group } = req.params;
 
-    try {
-        res.json(await TwitterManager.getGroupInfo(group, DateOperations.getYesterday()));
-    }
-    catch(err) {
-        exceptionMessage(`/api/${social}/groups/${group}/info`, err.message);
-        res.status(404).send({ message: 'Check your request parameters.' });
-    }
+    info = await TwitterManager.getGroupInfo(group, DateOperations.getYesterday());
+    
+    if (info == null)
+        return res.status(404).send({ message: 'Check your request parameters.' });
+
+    res.json(info);
 });
 
-app.get('/api/:social/groups/:group/insights', async (req, res) => {
-    const { social, group } = req.params;
+app.get('/api/twitter/groups/:group/insights', async (req, res) => {
+    const { group } = req.params;
 
-    try {
-        res.json(await TwitterManager.getGroupInsights(group, DateOperations.getYesterday()));
-    }
-    catch(err) {
-        exceptionMessage(`/api/${social}/groups/${group}/insights`, err.message);
-        res.status(404).send({ message: 'Check your request parameters.' });
-    }
+    insights = await TwitterManager.getGroupInsights(group, DateOperations.getYesterday());
+    
+    if (insights == null)
+        return res.status(404).send({ message: 'Check your request parameters.' });
+
+    res.json(insights);
 });
 
-app.get('/api/:social/groups/:group/history/:operation/:since', async (req, res) => {
-    const { social, group, operation, since } = req.params;
+app.get('/api/twitter/groups/:group/history/:operation/:since', async (req, res) => {
+    const { group, operation, since } = req.params;
 
-    try {
-        if (operation == 'followers') res.json(await TwitterManager.getGroupFollowers(group, since_mapper[since]));
-        else if (operation == 'likes') res.json(await TwitterManager.getGroupLikes(group, since_mapper[since]));
-        else if (operation == 'retweets') res.json(await TwitterManager.getGroupRetweets(group, since_mapper[since]));
-        else if (operation == 'replies') res.json(await TwitterManager.getGroupReplies(group, since_mapper[since]));
-        else if (operation == 'lens') res.json(await TwitterManager.getGroupLengths(group, since_mapper[since]));
-        else if (operation == 'fetched') res.json(await TwitterManager.getGroupFetchedTweets(group, since_mapper[since]));
-        else res.json([]);
-    }
-    catch(err) {
-        exceptionMessage(`/api/${social}/groups/${group}/history/${operation}/${since}`, err.message);
-        res.status(404).send({ message: 'Check your request parameters.' });
-    }
+    if (operation == 'followers') history = await TwitterManager.getGroupFollowers(group, since_mapper[since]);
+    else if (operation == 'likes') history = await TwitterManager.getGroupLikes(group, since_mapper[since]);
+    else if (operation == 'retweets') history = await TwitterManager.getGroupRetweets(group, since_mapper[since]);
+    else if (operation == 'replies') history = await TwitterManager.getGroupReplies(group, since_mapper[since]);
+    else if (operation == 'lens') history = await TwitterManager.getGroupLengths(group, since_mapper[since]);
+    else if (operation == 'fetched') history = await TwitterManager.getGroupFetchedTweets(group, since_mapper[since]);
+    else history = null;
+
+    if (history == null)
+        return res.status(404).send({ message: 'Check your request parameters.' });
+
+    res.json(history);
 });
