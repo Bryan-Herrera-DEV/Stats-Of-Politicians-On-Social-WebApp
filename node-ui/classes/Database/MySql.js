@@ -58,21 +58,29 @@ class MySql extends RelationalDatabase {
             return null;
         }
 
-        return await new Promise((resolve, reject) => {
-            this._connection.query(sqlQuery, data, (error, res) => {
-                if (error) reject(error.message);
-                else resolve(JSON.stringify(res));
+        try {
+            return await new Promise((resolve, reject) => {
+                this._connection.query(sqlQuery, data, (error, res) => {
+                    if (error) reject(error.message);
+                    else resolve(JSON.stringify(res));
+                });
+            })
+            .then(async res => {
+                await this._disconnect();
+                return JSON.parse(res);
+            })
+            .catch(async err => {
+                console.log('Error in MySql class @ getRows() ' + err);
+                await this._disconnect();
+                return null;
             });
-        })
-        .then(async res => {
-            await this._disconnect();
-            return JSON.parse(res);
-        })
-        .catch(async err => {
-            console.log('Error in MySql class @ getRows() ' + err);
-            await this._disconnect();
+        }
+        catch (err) {
+            console.error('MySql class @ getRows() : ', err.message);
+            console.error(sqlQuery);
+            console.error(data);
             return null;
-        });
+        }
     }
 }
 
