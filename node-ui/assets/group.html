@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html translate="no">
+    <head>
+
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="Statistics of Politicians on Social Media."/>
+        <meta name="theme-color" content="#fed99b"/>
+        <meta name="author" content="Antonio Scardace">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/group.css">
+
+        <link rel="icon" type="image/png" sizes="32x32" href="imgs/logo.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="imgs/logo.png">
+
+        <title>Group Stats</title>
+
+    </head>
+    <body>
+
+        <div class="loading-page">
+            <div class="loader-block">
+                <div class="loader"> </div>
+            </div>
+            <p>Loading...</p>
+        </div>
+
+        <section class="real-page">
+
+            <a href="/index.html"><img class="back" src="imgs/home.gif" alt="Back Home"/></a>
+            
+            <section class="profile">
+                <p id="name"></p>
+                <div id="color"></div>
+    
+                <div class="container metrics">
+                    <div class="col">
+                        <div class="metric">
+                            <p class="title">Total Followers</p>
+                            <p class="number" id="followers"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="metric">
+                            <p class="title">Total Tweets</p>
+                            <p class="number" id="tweets"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="metric">
+                            <p class="title">Analyzed Accounts Yesterday</p>
+                            <p class="number" id="accs"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="metric">
+                            <p class="title">Analyzed Tweets Yesterday</p>
+                            <p class="number" id="fetched"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="accounts">
+                <h1>Related Accounts</h1>
+                <ul class="list-group" id="handles"> </ul>
+            </section>
+    
+            <section class="analytics">
+                <div class="container stats">
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Total Likes Yesterday</p>
+                            <p class="number" id="tot_likes"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Total Retweets Yesterday</p>
+                            <p class="number" id="tot_retweets"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Total Replies Yesterday</p>
+                            <p class="number" id="tot_replies"></p>
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Avg Tweet Length Yesterday</p>
+                            <p class="number" id="avg_length"></p>
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Avg Likes Yesterday</p>
+                            <p class="number" id="avg_likes"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Avg Retweets Yesterday</p>
+                            <p class="number" id="avg_retweets"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Avg Replies Yesterday</p>
+                            <p class="number" id="avg_replies"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="data">
+                            <p class="title">Avg Sentiment Yesterday<br/><a href="https://ojs.aaai.org/index.php/ICWSM/article/view/14550" target="_blank">F1 Accuracy: 0.96 and 0.84</a></p>
+                            <p class="number" id="avg_sentiment"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts">
+                    <div class="lines">
+                        <canvas id="followers-within-month" class="line-chart"></canvas>
+                        <canvas id="followers-within-year" class="line-chart"></canvas>
+                        <canvas id="lens-within-month" class="line-chart"></canvas>
+                        <canvas id="lens-within-year" class="line-chart"></canvas>
+                        <canvas id="likes-within-month" class="line-chart"></canvas>
+                        <canvas id="likes-within-year" class="line-chart"></canvas>
+                        <canvas id="retweets-within-month" class="line-chart"></canvas>
+                        <canvas id="retweets-within-year" class="line-chart"></canvas>
+                        <canvas id="replies-within-month" class="line-chart"></canvas>
+                        <canvas id="replies-within-year" class="line-chart"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0-beta.13/dist/chart.js" /></script>
+        <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0-beta.2"></script>
+        <script src="js/charts.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/group.js"></script>
+
+    </body>
+</html>
