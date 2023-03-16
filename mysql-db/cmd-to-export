@@ -1,0 +1,1 @@
+/usr/bin/mysqldump -u root --password=Jm9Ca9Sh6 politics_stats > dump.sql
