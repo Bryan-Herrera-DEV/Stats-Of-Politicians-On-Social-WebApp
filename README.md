@@ -12,11 +12,10 @@ It analyzes on any social media, politicians of more countries, of any political
 The structure of the project is designed below.
 All the components have been created on Docker.
 
-- **Config file (.yml)**: has been created to store countries, socials, and accounts we have to analyze.
-- **Crawler | Python**: once at a day it reads the YML file, fetches all the data, and save them into the db.
+- **Crawler | Python & Config file (.yml)**: once at a day it reads the YML file (countries, socials, and accounts we have to analyze), fetches all the data, and save them into the db.
 - **Database | MySQL**: stores all the data sent by the Crawler.
 - **UI | Node.Js, HTML, CSS, JS**: fetches and visualize all the data from the database.
-- **Health Checker | Python & Yaml**: it checks every second the health of all Docker containers. On error (and online return) it sends notifications on Telegram and-or Slack.
+- **Health Checker | Python & Config file (.yml)**: it checks every second the health of all Docker containers. On error (and online return) it sends notifications on Telegram and-or Slack.
 
 ![Project Schema](/docs/imgs/schema.png)
 
