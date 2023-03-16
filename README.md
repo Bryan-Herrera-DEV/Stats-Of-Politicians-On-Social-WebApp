@@ -66,12 +66,12 @@ Let's see API calls:
 
 ``/api/:social/accounts/:handle/info``: gets yesterday info about :handle on :social.<br/>
 ``/api/:social/accounts/:handle/insights``: gets yesterday insights about :handle on :social.<br/>
-``/api/:social/accounts/:handle/hashtags/:since/:limit``: gets top :limit used hashtags by :handle since :since on :social.<br/>
-``/api/:social/accounts/:handle/history/:operation/:since``: gets history of :operation on :social since :since for :handle.<br/>
+``/api/:social/accounts/:handle/hashtags/:since/:limit``: gets top :limit used hashtags by :handle since :since.<br/>
+``/api/:social/accounts/:handle/history/:operation/:since``: gets history of :operation since :since for :handle.<br/>
 
 ``/api/:social/groups/:group/info``: gets yesterday info about :group on :social.<br/>
 ``/api/:social/groups/:group/insights``: gets yesterday insights about :group on :social.<br/>
-``/api/:social/groups/:group/history/:operation/:since``: gets history of :operation on :social since :since for :group.<br/>
+``/api/:social/groups/:group/history/:operation/:since``: gets history of :operation since :since for :group.<br/>
 
 ## Provided Statistics
 
@@ -121,8 +121,10 @@ So that the repository is successfully cloned and project run smoothly, a few st
 
 ### Requisites
 
-* A good internet connection and a lot of memory space are required. 
+* A good and stable internet connection. 
 * Use of Linux, MacOS, or Windows WSL.
+* Having a Twitter Developer Account with related keys and tokens (for Twitter).
+* Having a Telegram Bot (with related channel) or a Slack WebHook.
 * Need to download and install [Docker](https://docs.docker.com/get-docker/) ([Docker Desktop](https://www.docker.com/products/docker-desktop/) is recommended).
 * The use of [Visual Studio Code](https://code.visualstudio.com/download) is strongly recommended for modify.
 
