@@ -143,6 +143,7 @@ So that the repository is successfully cloned and project run smoothly, a few st
 - [ ] Add other NLP stats (e.g. Emotion Detection).
 - [ ] Re-implement front-end using Vue.js or similar.
 - [ ] Re-design Node.Js back-end to be hybrid with more socials and countries. Design Patterns...
+- [ ] Refactoring NODE-UI codes (especially .js files).
 
 ## License :copyright:
 
