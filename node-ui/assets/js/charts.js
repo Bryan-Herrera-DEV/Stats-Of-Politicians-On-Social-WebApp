@@ -32,7 +32,6 @@ function generateHistoryCompareChart(canvas_id, labels, colors, dates, y_values,
                 }
             },
             scales: {
-                y: { beginAtZero: false },
                 x: {
                     type: 'time',
                     time: {
@@ -60,7 +59,6 @@ function generateHistoryChart(canvas_id, x_values, y_values, label, unit, stepSi
         options: {
             maintainAspectRatio: false,
             scales: {
-                y: { beginAtZero: false },
                 x: {
                     type: 'time',
                     time: {
