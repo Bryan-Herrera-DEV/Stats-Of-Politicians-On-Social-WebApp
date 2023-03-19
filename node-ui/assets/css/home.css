@@ -45,6 +45,11 @@
     margin-top: 70px;
 }
 
+.welcome .intro p a {
+    color: var(--main-text-black);
+    letter-spacing: 0.5px;
+}
+
 .welcome .intro h5 {
     margin-top: 70px;
 }
@@ -78,7 +83,7 @@
 }
 
 .groups .list .container {
-    max-width: 75%;
+    max-width: 80%;
     width: 65%;
 
     margin-left: 50%;
@@ -143,7 +148,7 @@
     margin-left: 50%;
     transform: translateX(-50%);
 
-    width: 75%;
+    width: 80%;
 }
 
 .groups .charts .lines {
@@ -155,13 +160,13 @@
 }
 
 .groups .charts .line-chart {
-    margin-top: 25px;
+    margin-top: 40px;
     margin-left: 50%;
     transform: translateX(-50%);
 
     width: 100%;
-    max-width: 500px; 
-    max-height: 450px;
+    max-width: 585px; 
+    max-height: 480px;
 }
 
 
@@ -270,6 +275,26 @@
 
 
 
+@media (min-width: 1025px) and (max-width: 1600px) { /* Small Notebook */
+    .groups .list .container {
+        width: 80%;
+    }
+
+    .groups .charts {
+        width: 85%;
+    }
+    
+    .groups .charts .line-chart {
+        max-width: 490px; 
+        max-height: 450px;
+    }
+
+    .accounts .list .container {
+        width: 80%;
+        grid-gap: 40px;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 1024px) { /* Tablet */
     .welcome .intro {
         width: 570px;
@@ -315,11 +340,11 @@
 
     .welcome .intro p {
         font-size: 13px;
-        margin-top: 45px;
+        margin-top: 40px;
     }
 
     .welcome .intro h5 {
-        margin-top: 45px;
+        margin-top: 40px;
     }
 
     .groups .list {

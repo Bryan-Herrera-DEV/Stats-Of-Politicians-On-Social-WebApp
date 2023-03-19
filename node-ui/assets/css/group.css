@@ -161,7 +161,7 @@
     margin-left: 50%;
     transform: translateX(-50%);
 
-    width: 75%;
+    width: 80%;
 }
 
 .analytics .charts .lines {
@@ -173,16 +173,28 @@
 }
 
 .analytics .charts .line-chart {
-    margin-top: 25px;
+    margin-top: 40px;
     margin-left: 50%;
     transform: translateX(-50%);
 
     width: 100%;
-    max-width: 500px; 
-    max-height: 450px;
+    max-width: 585px; 
+    max-height: 480px;
 }
 
 
+
+@media (min-width: 1025px) and (max-width: 1600px) { /* Small Notebook */
+    .analytics .charts {
+        width: 85%;
+    }
+    
+    .analytics .charts .line-chart {
+        margin-top: 35px;
+        max-width: 460px; 
+        max-height: 450px;
+    }
+}
 
 @media (min-width: 768px) and (max-width: 1024px) { /* Tablet */
     .profile .metrics {
