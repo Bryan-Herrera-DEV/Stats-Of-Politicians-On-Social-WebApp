@@ -1,0 +1,55 @@
+.accordion {
+    margin-top: 60px;
+    margin-bottom: 65px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+    width: 700px;
+    max-width: 83%;
+}
+
+.accordion h1 {
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 58px;
+
+    margin-bottom: 2.5rem;
+}
+
+.accordion .accordion-flush .accordion-item {
+    margin-bottom: 45px;
+    border: unset;
+}
+
+.accordion .accordion-flush .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+    color: var(--main-text-black);
+}
+.accordion .accordion-flush .accordion-item .accordion-header .accordion-button:focus {
+    box-shadow: none;
+    border-color: unset;
+}
+.accordion .accordion-flush .accordion-item .accordion-header .accordion-button {
+    background: var(--main-bg-yellow);
+    
+    font-family: 'Poor Story';
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.accordion .accordion-flush .accordion-collapse {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 480px) { /* Smartphone */
+    .accordion {
+        margin-top: 40px;
+    }
+}
