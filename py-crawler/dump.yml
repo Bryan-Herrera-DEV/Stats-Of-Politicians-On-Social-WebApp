@@ -17,7 +17,7 @@ ITA_groups:
       name: PD
       logo_color: '#be2a2a'
   - group:
-      name: AZIONE-IV
+      name: A-IV-RE
       logo_color: '#c77ca4'
   - group:
       name: FI
@@ -41,13 +41,7 @@ ITA_twitter_accounts:
       handle: GiuseppeConteIT
       group: M5S
   - account:
-      handle: BaldinoVittoria
-      group: M5S
-  - account:
       handle: c_appendino
-      group: M5S
-  - account:
-      handle: MariaDomenicaC4
       group: M5S
 
   - account: 
@@ -61,9 +55,6 @@ ITA_twitter_accounts:
       group: PD
   - account: 
       handle: robersperanza
-      group: PD
-  - account: 
-      handle: ZanAlessandro
       group: PD
 
   - account: 
@@ -88,9 +79,6 @@ ITA_twitter_accounts:
   - account: 
       handle: Antonio_Tajani
       group: FI
-  - account: 
-      handle: LiciaRonzulli
-      group: FI
     
   - account: 
       handle: matteosalvinimi
@@ -114,7 +102,4 @@ ITA_twitter_accounts:
       group: FDI
   - account: 
       handle: DSantanche
-      group: FDI
-  - account: 
-      handle: Ignazio_LaRussa
       group: FDI

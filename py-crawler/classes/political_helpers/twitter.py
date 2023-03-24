@@ -24,7 +24,7 @@ class TwitterHelper(Helper):
                 'avg_likes': account.get_avg_metric_per_tweet('like_count'),
                 'avg_replies': account.get_avg_metric_per_tweet('reply_count'),
                 'avg_retweets': account.get_avg_metric_per_tweet('retweet_count'),
-                'avg_sentiment': account.get_avg_sentiment(),
+                'avg_sentiment': account.avg_sentiment,
                 'tot_likes': account.get_sum_metric('like_count'),
                 'tot_retweets': account.get_sum_metric('retweet_count'),
                 'tot_replies': account.get_sum_metric('reply_count')

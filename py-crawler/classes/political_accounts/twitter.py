@@ -31,6 +31,7 @@ class TwitterAccount(Account):
         [self.tweets.append(tweet) for tweet in tweets]
 
         self.hashtags = self.get_used_hashtags()
+        self.avg_sentiment = self.get_avg_sentiment()
 
         self.id = info['id']
         self.name = info['name']
