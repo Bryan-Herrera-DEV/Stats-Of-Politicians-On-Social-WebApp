@@ -19,7 +19,7 @@ class TwitterGroup(Group):
         return reduce((lambda curr, sum: curr + sum), lens) / len(self.accounts)
 
     def get_most_freq_sentiment(self):
-        sents = map((lambda account: account.get_avg_sentiment()), self.accounts)
+        sents = map((lambda account: account.avg_sentiment), self.accounts)
         non_null = list(filter((lambda sent: sent != 'Null'), sents))
         return 'Null' if len(non_null) == 0 else max(set(non_null), key = non_null.count)
     
