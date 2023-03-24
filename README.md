@@ -142,12 +142,19 @@ So that the repository is successfully cloned and project run smoothly, a few st
    $ bash run.sh
 ``` 
 
+### Useful Links
+
+| Title | Link |
+| ----- | ---- |
+| Node-UI | [http://localhost:8080/](http://localhost:8080/) |
+| Grafana-Charts | [https://localhost:3000/](https://localhost:3000/) |
+
 ## To Do Improvements
 
 - [ ] Add other countries in addition to Italy.
 - [ ] Add other socials (e.g. Instagram).
 - [ ] Add other NLP stats (e.g. Emotion Detection).
-- [ ] Take a look at: HTTPS, Domain, Load Balancer, HTTP Server, Host (e.g. AWS), Copyright.
+- [ ] Take a look at: HTTPS, Domain, Load Balancer & HTTP Server (NGINX), Host (AWS).
 - [ ] Re-implement front-end using Vue.js or similar.
 - [ ] Re-design Node.Js back-end to be hybrid with more socials and countries. Design Patterns...
 
