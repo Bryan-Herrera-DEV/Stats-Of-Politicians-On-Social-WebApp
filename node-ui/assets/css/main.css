@@ -77,12 +77,6 @@ html, body {
 
 
 
-@keyframes load {
-    50% {
-        height: 38px;
-   }
-}
-
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -147,15 +141,13 @@ html, body {
 
 .loading-page .loader-block .loader::before, .loading-page .loader-block .loader::after {
     content: "";
-    animation: load 1.3s linear infinite;
+    height: 38px;
+    width: 14px;
 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    width: 14px;
-    height: 14px;
     
     border-radius: 14px;
 }

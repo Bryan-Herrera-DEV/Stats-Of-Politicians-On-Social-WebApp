@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content="Statistics of Politicians on Social Media."/>
         <meta name="keywords" content="parlamento, parlamento italiano, camera dei deputati, senato, italia, repubblica, politica, social media, statistiche, analisi, governo, twitter"/>
-        <meta name="theme-color" content="#fed99b"/>
+        <meta name="theme-color" content="#fed99b5e"/>
         <meta name="author" content="Antonio Scardace">
         
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap">
@@ -157,30 +157,52 @@
                 </div>
 
                 <div class="charts">
-                    <div class="lines">
-                        <canvas id="followers-within-month" class="line-chart"></canvas>
-                        <canvas id="followers-within-year" class="line-chart"></canvas>
-                        <canvas id="lens-within-month" class="line-chart"></canvas>
-                        <canvas id="lens-within-year" class="line-chart"></canvas>
-                        <canvas id="likes-within-month" class="line-chart"></canvas>
-                        <canvas id="likes-within-year" class="line-chart"></canvas>
-                        <canvas id="retweets-within-month" class="line-chart"></canvas>
-                        <canvas id="retweets-within-year" class="line-chart"></canvas>
-                        <canvas id="replies-within-month" class="line-chart"></canvas>
-                        <canvas id="replies-within-year" class="line-chart"></canvas>
+                    <div class="line-chart">
+                        <iframe id="iframe-num-followers" onload="finishLoading()" frameborder="0"></iframe>
+                        <p class="suggestion">To zoom in, select the time range with your mouse.</p>
+                        <p class="suggestion">To compare just some groups, click on one and then click on others while pressing CTRL.</p>
+                        <button type="button" class="btn btn-danger" onclick="refreshChart(this)"><i class="fa-solid fa-arrows-rotate"></i> Reset Default Time Range</button>
+                    </div>
+                    <div class="line-chart">
+                        <iframe id="iframe-num-tweets" onload="finishLoading()" frameborder="0"></iframe>
+                        <p class="suggestion">To zoom in, select the time range with your mouse.</p>
+                        <p class="suggestion">To compare just some groups, click on one and then click on others while pressing CTRL.</p>
+                        <button type="button" class="btn btn-danger" onclick="refreshChart(this)"><i class="fa-solid fa-arrows-rotate"></i> Reset Default Time Range</button>
+                    </div>
+                    <div class="line-chart">
+                        <iframe id="iframe-avg-len" onload="finishLoading()" frameborder="0"></iframe>
+                        <p class="suggestion">To zoom in, select the time range with your mouse.</p>
+                        <p class="suggestion">To compare just some groups, click on one and then click on others while pressing CTRL.</p>
+                        <button type="button" class="btn btn-danger" onclick="refreshChart(this)"><i class="fa-solid fa-arrows-rotate"></i> Reset Default Time Range</button>
+                    </div>
+                    <div class="line-chart">
+                        <iframe id="iframe-avg-likes" onload="finishLoading()" frameborder="0"></iframe>
+                        <p class="suggestion">To zoom in, select the time range with your mouse.</p>
+                        <p class="suggestion">To compare just some groups, click on one and then click on others while pressing CTRL.</p>
+                        <button type="button" class="btn btn-danger" onclick="refreshChart(this)"><i class="fa-solid fa-arrows-rotate"></i> Reset Default Time Range</button>
+                    </div>
+                    <div class="line-chart">
+                        <iframe id="iframe-avg-retweets" onload="finishLoading()" frameborder="0"></iframe>
+                        <p class="suggestion">To zoom in, select the time range with your mouse.</p>
+                        <p class="suggestion">To compare just some groups, click on one and then click on others while pressing CTRL.</p>
+                        <button type="button" class="btn btn-danger" onclick="refreshChart(this)"><i class="fa-solid fa-arrows-rotate"></i> Reset Default Time Range</button>
+                    </div>
+                    <div class="line-chart">
+                        <iframe id="iframe-avg-replies" onload="finishLoading()" frameborder="0"></iframe>
+                        <p class="suggestion">To zoom in, select the time range with your mouse.</p>
+                        <p class="suggestion">To compare just some groups, click on one and then click on others while pressing CTRL.</p>
+                        <button type="button" class="btn btn-danger" onclick="refreshChart(this)"><i class="fa-solid fa-arrows-rotate"></i> Reset Default Time Range</button>
                     </div>
                 </div>
             </section>
 
         </section>
 
+        <script>var charts = 6;</script>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0-beta.13/dist/chart.js" /></script>
-        <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0-beta.2"></script>
+        <script src="https://kit.fontawesome.com/b074a19227.js" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
-        <script src="js/charts.js"></script>
         <script src="js/account.js"></script>
         
     </body>

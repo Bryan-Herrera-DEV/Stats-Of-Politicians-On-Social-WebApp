@@ -70,7 +70,7 @@
 
 .groups .list {
     margin-top: 100px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 
 .groups .list h1 {
@@ -151,22 +151,31 @@
     width: 80%;
 }
 
-.groups .charts .lines {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-
-    margin-top: 25px;
-}
-
 .groups .charts .line-chart {
-    margin-top: 40px;
+    margin-top: 70px;
     margin-left: 50%;
     transform: translateX(-50%);
 
-    width: 100%;
-    max-width: 585px; 
-    max-height: 480px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.groups .charts .line-chart iframe {
+    width: 1000px; 
+    height: 480px;
+}
+
+.groups .charts .line-chart .suggestion {
+    font-size: 13px;
+    font-style: italic;
+    color: #666;
+
+    margin-bottom: 3px;
+}
+
+.groups .charts .line-chart .btn {
+    margin-top: 10px;
+    padding: 10px 15px;
 }
 
 
@@ -280,15 +289,6 @@
         width: 80%;
     }
 
-    .groups .charts {
-        width: 85%;
-    }
-    
-    .groups .charts .line-chart {
-        max-width: 490px; 
-        max-height: 450px;
-    }
-
     .accounts .list .container {
         width: 80%;
         grid-gap: 40px;
@@ -307,13 +307,16 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .groups .charts {
-        width: 150%;
+    .groups .charts .line-chart .suggestion {
+        display: none;
     }
 
-    .groups .charts .lines {
-        grid-gap: 20px;
-        grid-template-columns: repeat(1, 1fr);
+    .groups .charts .line-chart iframe {
+        width: 650px; 
+    }
+
+    .groups .charts .line-chart .btn {
+        display: none;
     }
 
     .accounts .list h1 {
@@ -370,9 +373,16 @@
         width: 150%;
     }
 
-    .groups .charts .lines {
-        grid-gap: 25px;
-        grid-template-columns: repeat(1, 1fr);
+    .groups .charts .line-chart .suggestion {
+        display: none;
+    }
+
+    .groups .charts .line-chart iframe {
+        width: 320px; 
+    }
+
+    .groups .charts .line-chart .btn {
+        display: none;
     }
 
     .accounts .list h1 {

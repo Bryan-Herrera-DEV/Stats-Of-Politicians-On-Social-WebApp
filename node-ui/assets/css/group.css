@@ -157,44 +157,41 @@
 }
 
 .analytics .charts {
-    margin-top: 60px;
+    margin-top: 95px;
     margin-left: 50%;
     transform: translateX(-50%);
 
     width: 80%;
 }
 
-.analytics .charts .lines {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-
-    margin-top: 25px;
-}
-
 .analytics .charts .line-chart {
-    margin-top: 40px;
+    margin-top: 60px;
     margin-left: 50%;
     transform: translateX(-50%);
 
-    width: 100%;
-    max-width: 585px; 
-    max-height: 480px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.analytics .charts .line-chart .suggestion {
+    font-size: 13px;
+    font-style: italic;
+    color: #666;
+
+    margin-bottom: 3px;
+}
+
+.analytics .charts .line-chart iframe {
+    width: 1000px; 
+    height: 480px;
+}
+
+.analytics .charts .line-chart .btn {
+    margin-top: 10px;
+    padding: 10px 15px;
 }
 
 
-
-@media (min-width: 1025px) and (max-width: 1600px) { /* Small Notebook */
-    .analytics .charts {
-        width: 85%;
-    }
-    
-    .analytics .charts .line-chart {
-        margin-top: 35px;
-        max-width: 460px; 
-        max-height: 450px;
-    }
-}
 
 @media (min-width: 768px) and (max-width: 1024px) { /* Tablet */
     .profile .metrics {
@@ -211,13 +208,16 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .analytics .charts {
-        width: 150%;
+    .analytics .charts .line-chart .suggestion {
+        display: none;
     }
 
-    .analytics .charts .lines {
-        grid-gap: 20px;
-        grid-template-columns: repeat(1, 1fr);
+    .analytics .charts .line-chart iframe {
+        width: 650px; 
+    }
+
+    .analytics .charts .line-chart .btn {
+        display: none;
     }
 }
 
@@ -248,8 +248,15 @@
         width: 150%;
     }
 
-    .analytics .charts .lines {
-        grid-gap: 25px;
-        grid-template-columns: repeat(1, 1fr);
+    .analytics .charts .line-chart .suggestion {
+        display: none;
+    }
+
+    .analytics .charts .line-chart iframe {
+        width: 320px; 
+    }
+
+    .analytics .charts .line-chart .btn {
+        display: none;
     }
 }
