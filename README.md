@@ -14,7 +14,7 @@ All the components have been created on Docker.
 
 - **Crawler | Python & Config file (.yml)**: once at a day it reads the YML file (countries, socials, and accounts we have to analyze), fetches all the data, and save them into the db.
 - **Database | MySQL**: stores all the data sent by the Crawler updated day-by-day.
-- **Grafana**: it makes and provides a lot of charts with data fetched from the database.
+- **Charts | Grafana**: it makes and provides a lot of charts with data fetched from the database.
 - **UI | Node.Js, HTML, CSS, JS**: fetches and visualizes (even using Grafana) all the data from the database.
 - **Health Checker | Python & Config file (.yml)**: it checks every second the health of all Docker containers. On error (and online return) it sends notifications on Telegram and-or Slack.
 
