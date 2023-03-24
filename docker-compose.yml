@@ -26,7 +26,6 @@ services:
   grafana-charts:
     image: grafana/grafana:8.2.6
     container_name: grafana-charts
-    restart: "no"
     user: "0:0"
     ports:
       - 3000:3000
@@ -42,6 +41,10 @@ services:
       GF_DATABASE_USER: root
       GF_DATABASE_PASSWORD: Jm9Ca9Sh6
       GF_DATABASE_SSL_MODE: enable
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 2
 
   #-----------------------#
   #     Crawler Python    #
@@ -107,6 +110,7 @@ services:
       - py-crawler
       - node-ui
     environment:
+      IS_RELEASE: 0
       SERVERLIST_PATH: /home/app/health/settings.yml
       CHECK_TIME_SECONDS: 1
       TELEGRAM_TOKEN: '6012596464:AAE5Zg423LgO5dAQdqUTWd834qu9xoIttYA'
