@@ -46,66 +46,6 @@ class TwitterManager extends Manager {
         );
     }
 
-    static async getAccountFollowers(username, date) {
-        return await TwitterManager._db.getRows(
-            'SELECT date, followers_count \
-            FROM twitter_dailystats_accounts \
-            WHERE handle = ? AND date >= ? \
-            ORDER BY date',
-            [username, date]
-        );
-    }
-
-    static async getAccountRetweets(username, date) {
-        return await TwitterManager._db.getRows(
-            'SELECT date, avg_retweets \
-            FROM twitter_dailystats_accounts \
-            WHERE handle = ? AND date >= ? \
-            ORDER BY date',
-            [username, date]
-        );
-    }
-
-    static async getAccountReplies(username, date) {
-        return await TwitterManager._db.getRows(
-            'SELECT date, avg_replies \
-            FROM twitter_dailystats_accounts \
-            WHERE handle = ? AND date >= ? \
-            ORDER BY date',
-            [username, date]
-        );
-    }
-
-    static async getAccountLikes(username, date) {
-        return await TwitterManager._db.getRows(
-            'SELECT date, avg_likes \
-            FROM twitter_dailystats_accounts \
-            WHERE handle = ? AND date >= ? \
-            ORDER BY date',
-            [username, date]
-        );
-    }
-
-    static async getAccountLengths(username, date) {
-        return await TwitterManager._db.getRows(
-            'SELECT date, avg_len \
-            FROM twitter_dailystats_accounts \
-            WHERE handle = ? AND date >= ? \
-            ORDER BY date',
-            [username, date]
-        );
-    }
-
-    static async getAccountFetchedTweets(name, date) {
-        return await TwitterManager._db.getRows(
-            'SELECT date, fetched_tweets_count \
-            FROM twitter_dailystats_accounts \
-            WHERE name = ? AND date > ? \
-            ORDER BY date',
-            [name, date]
-        );
-    }
-
     static async getGroupInfo(name, date) {
         return await TwitterManager._db.getRows(
             'SELECT * FROM political_groups WHERE name = ? AND last_update = ?',
@@ -116,66 +56,6 @@ class TwitterManager extends Manager {
     static async getGroupInsights(name, date) {
         return await TwitterManager._db.getRows(
             'SELECT * FROM twitter_dailystats_group WHERE name = ? AND date = ?',
-            [name, date]
-        );
-    }
-
-    static async getGroupFollowers(name, date) {
-        return await TwitterManager._db.getRows(
-            'SELECT date, followers_count \
-            FROM twitter_dailystats_group \
-            WHERE name = ? AND date > ? \
-            ORDER BY date',
-            [name, date]
-        );
-    }
-
-    static async getGroupLikes(name, date) {
-        return await TwitterManager._db.getRows(
-            'SELECT date, avg_likes \
-            FROM twitter_dailystats_group \
-            WHERE name = ? AND date > ? \
-            ORDER BY date',
-            [name, date]
-        );
-    }
-
-    static async getGroupRetweets(name, date) {
-        return await TwitterManager._db.getRows(
-            'SELECT date, avg_retweets \
-            FROM twitter_dailystats_group \
-            WHERE name = ? AND date > ? \
-            ORDER BY date',
-            [name, date]
-        );
-    }
-
-    static async getGroupReplies(name, date) {
-        return await TwitterManager._db.getRows(
-            'SELECT date, avg_replies \
-            FROM twitter_dailystats_group \
-            WHERE name = ? AND date > ? \
-            ORDER BY date',
-            [name, date]
-        );
-    }
-
-    static async getGroupLengths(name, date) {
-        return await TwitterManager._db.getRows(
-            'SELECT date, avg_len \
-            FROM twitter_dailystats_group \
-            WHERE name = ? AND date > ? \
-            ORDER BY date',
-            [name, date]
-        );
-    }
-
-    static async getGroupFetchedTweets(name, date) {
-        return await TwitterManager._db.getRows(
-            'SELECT date, fetched_tweets_count \
-            FROM twitter_dailystats_group \
-            WHERE name = ? AND date > ? \
-            ORDER BY date',
             [name, date]
         );
     }

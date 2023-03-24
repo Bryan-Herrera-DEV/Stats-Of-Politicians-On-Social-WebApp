@@ -19,6 +19,10 @@ class Manager {
             [country, date]
         );
     }
+
+    static async getAccounts() {
+        throw new Error('Method must be implemented.');
+    }
 }
 
 module.exports = Manager
