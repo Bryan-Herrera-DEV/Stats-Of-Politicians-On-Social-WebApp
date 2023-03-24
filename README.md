@@ -14,7 +14,8 @@ All the components have been created on Docker.
 
 - **Crawler | Python & Config file (.yml)**: once at a day it reads the YML file (countries, socials, and accounts we have to analyze), fetches all the data, and save them into the db.
 - **Database | MySQL**: stores all the data sent by the Crawler updated day-by-day.
-- **UI | Node.Js, HTML, CSS, JS**: fetches and visualize all the data from the database.
+- **Grafana**: it makes and provides a lot of charts with data fetched from the database.
+- **UI | Node.Js, HTML, CSS, JS**: fetches and visualizes (even using Grafana) all the data from the database.
 - **Health Checker | Python & Config file (.yml)**: it checks every second the health of all Docker containers. On error (and online return) it sends notifications on Telegram and-or Slack.
 
 ![Project Schema](/docs/imgs/schema.png)
@@ -66,30 +67,30 @@ Let's see the available APIs at this moment:
 ``/api/:social/accounts/:handle/info``: gets yesterday info about :handle on :social.<br/>
 ``/api/:social/accounts/:handle/insights``: gets yesterday insights about :handle on :social.<br/>
 ``/api/:social/accounts/:handle/hashtags/:since/:limit``: gets top :limit used hashtags by :handle since :since.<br/>
-``/api/:social/accounts/:handle/history/:operation/:since``: gets history of :operation since :since for :handle.<br/>
 
 ``/api/:social/groups/:group/info``: gets yesterday info about :group on :social.<br/>
 ``/api/:social/groups/:group/insights``: gets yesterday insights about :group on :social.<br/>
-``/api/:social/groups/:group/history/:operation/:since``: gets history of :operation since :since for :group.<br/>
 
 ## Provided Statistics
 
 - For Twitter:
   - For Each Account and Political Group:
-    - Total Likes
-    - Total Retweets
-    - Total Replies
-    - Average Likes
-    - Average Retweets
-    - Average Replies
+    - Total Likes (yesterday)
+    - Total Retweets (yesterday)
+    - Total Replies (yesterday)
+    - Average Likes (yesterday)
+    - Average Retweets (yesterday)
+    - Average Replies (yesterday)
     - Average Length of a Tweet (in characters)
-    - Average Sentiment Analysis (Positive, Negative, Neutral, Null)
-    - Chart with the History of Total Followers Over Time (last month, last year)
-    - Chart with the History of Avg Tweets Length Over Time (last month, last year)
-    - Chart with the History of Avg Likes Over Time (last month, last year
-    - Chart with the History of Avg Retweets Over Time (last month, last year)
-    - Chart with the History of Avg Replies Over Time (last month, last year)
-    - Top 5 Most Used Hashtags **(just for accounts)** (last week, last month, last year)
+    - Average Sentiment Analysis (Positive, Negative, Neutral, Null) (yesterday) <br/><br/>
+    - Chart with the History of Number of Analysed Tweets Over Time
+    - Chart with the History of Total Followers Over Time
+    - Chart with the History of Avg Tweets Length Over Time
+    - Chart with the History of Avg Likes Over Time
+    - Chart with the History of Avg Retweets Over Time
+    - Chart with the History of Avg Replies Over Time
+    - Top 5 Most Used Hashtags **(just for accounts)** (last week, last month, last year) <br/><br/>
+    - Charts of Compare Among All Political Groups (followers, likes, etc.)
 
 
 ## Light Demo
@@ -101,18 +102,24 @@ Let's see the available APIs at this moment:
 ![Screen 3](/docs/snaps/screen-2.png)
 ---
 ![Screen 4](/docs/snaps/screen-3.png)
-***
-![Screen 5](/docs/snaps/screen-4.png)
 ---
+![Screen 5](/docs/snaps/screen-4.png)
+***
 ![Screen 6](/docs/snaps/screen-5.png)
 ---
 ![Screen 7](/docs/snaps/screen-6.png)
 ---
 ![Screen 8](/docs/snaps/screen-7.png)
-***
+---
 ![Screen 9](/docs/snaps/screen-8.png)
 ---
 ![Screen 10](/docs/snaps/screen-9.png)
+***
+![Screen 11](/docs/snaps/screen-10.png)
+---
+![Screen 12](/docs/snaps/screen-11.png)
+***
+![Screen 13](/docs/snaps/screen-12.png)
 
 ## Getting Started
 
