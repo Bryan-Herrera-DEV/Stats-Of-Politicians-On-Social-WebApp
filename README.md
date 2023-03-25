@@ -1,11 +1,12 @@
 # Stats-Of-Politicians-On-Social-WebApp
 
-_Personal Project for Politicians Analysis_
+_Personal Project for Politicians Analysis._ <br/>
+_The idea comes from a university project for the Social Media Management course._
 
 ## Introduction
 
 The project aims to make stats about the use of Social Media by Politicians.
-It analyzes on any social media, politicians of more countries, of any political group.
+It analyzes any social media, politicians of more countries, of any political group.
 
 ## Structure
 
@@ -13,7 +14,7 @@ The structure of the project is designed below.
 All the components have been created on Docker.
 
 - **Health Checker | Python & YAML**: it checks every second the health of all Docker containers. On error (and online return) it sends notifications on Telegram and-or Slack.
-- **Crawler | Python & YAML**: once at a day it reads the YML file (countries, socials, and accounts we have to analyze), fetches all the data, and save them into the database.
+- **Crawler | Python & YAML**: once a day it reads the YML file (countries, socials, and accounts we have to analyze), fetches all the data, and saves them into the database.
 - **Database | MySQL**: stores all the data sent by the Crawler updated day-by-day.
 - **Charts | Grafana**: it makes and provides a lot of charts with data fetched from the database.
 - **UI | Node.Js, HTML, CSS, JS**: fetches and visualizes (even using Grafana) all the data from the database.
@@ -23,7 +24,7 @@ All the components have been created on Docker.
 ### Config File (YML)
 
 It is useful to store socials, countries, accounts, and political groups to analyze. <br/>
-I use a YML file rather than a relational DB, because it is more easier to update and store.
+I use a YML file rather than a relational DB because it is easier to update and store.
 
 Here is an example of what it contains:
 
@@ -31,20 +32,20 @@ Here is an example of what it contains:
 
 ### Crawler (Python)
 
-Everyday, at **00:00 AM UTC**, it starts a job with three main phases managed by ```Manager```.
+Every day, at **00:00 AM UTC**, it starts a job with three main phases managed by ```Manager```.
 
 - **Reading**: it reads from the YML config file all the info necessary to make stats. Precisely, it contains socials, countries and their respective political groups and accounts we want to analyze. 
 - **Fetching & Processing**: for each social and country, it retrieves data for each account for the day that just passed, and it puts them into an ```Account``` object (one for each account). Once made a list of accounts' objects, it instantiates a ```Group``` object. These objects make all the stats required for the last 24hrs.
-- **Saving**: once made all accounts and politics groups' objects associated with a given country on a given social, the data are saved throught a ```Helper``` into a database.
+- **Saving**: once made all accounts and politics groups' objects associated with a given country on a given social, the data are saved through a ```Helper``` into a database.
 
-Below is illustrated a semplified UML of the crawler. <br/>
+Below is illustrated a simplified UML of the crawler. <br/>
 It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **Factory Method Design Pattern**. 
 
 <img src="/docs/uml/crawler.svg" width="750px"/>
 
 ### Database (MySQL)
 
-The DBMS which I have chosen to store all the data is MySQL, a relational DBMS.<br/>
+The DBMS I have chosen to store all the data is in MySQL, a relational DBMS.<br/>
 Let's see the E-R schema.
 
 <img src="/docs/uml/db.svg" width="750px"/>
@@ -83,7 +84,7 @@ Let's see the available APIs at this moment:
     - Average Length of a Tweet (in characters)
     - Average Sentiment Analysis (Positive, Negative, Neutral, Null) (yesterday) <br/><br/>
     - Charts of Compare Among All Political Groups (followers, likes, etc.)<br/><br/>
-    - Chart with the History of Number of Analysed Tweets Over Time
+    - Chart with the History of the Number of Analysed Tweets Over Time
     - Chart with the History of Total Followers Over Time
     - Chart with the History of Avg Tweets Length Over Time
     - Chart with the History of Avg Likes Over Time
@@ -117,14 +118,14 @@ Let's see the available APIs at this moment:
 
 ## Getting Started
 
-So that the repository is successfully cloned and project run smoothly, a few steps need to be followed.
+So that the repository is successfully cloned and the project runs smoothly, a few steps need to be followed.
 
 ### Requisites
 
 * A stable internet connection. 
 * Use of Linux, MacOS, or Windows WSL.
 * Having a Twitter Developer Account with related keys and tokens (for Twitter).
-* Having a Telegram Bot (with related channel) or a Slack WebHook.
+* Having a Telegram Bot (with a related channel) or a Slack WebHook.
 * Need to download and install [Docker](https://docs.docker.com/get-docker/) ([Docker Desktop](https://www.docker.com/products/docker-desktop/) is recommended).
 * The use of [Visual Studio Code](https://code.visualstudio.com/download) is strongly recommended for modify.
 
@@ -148,7 +149,7 @@ So that the repository is successfully cloned and project run smoothly, a few st
 - [ ] Add other countries in addition to Italy.
 - [ ] Add other socials (e.g. Instagram).
 - [ ] Add other NLP stats (e.g. Emotion Detection).
-- [ ] Take a look at: HTTPS, Domain, Load Balancer & HTTP Server (NGINX), Host (AWS).
+- [ ] Take a look at HTTPS, Domain, Load Balancer & HTTP Server (NGINX), and Host (AWS).
 - [ ] Re-implement front-end using Vue.js or similar.
 - [x] Re-design Node.Js back-end to be hybrid with more socials and countries. Design Patterns...
 
