@@ -47,9 +47,9 @@ It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **F
 The DBMS which I have chosen to store all the data is MySQL, a relational DBMS. <br/>
 It is best suitable for simple operations like write and reading, it is reliable, simple, and faster, etc. <br/>
 
-Below is illustrated a logical schema of the database.
-
-![Logical DB](/docs/imgs/db.png)
+![E-R Schema](/docs/uml/db.svg)
+---
+![Logical Schema](/docs/imgs/db.png)
 
 ### UI (Node, HTML, CSS, JS)
 
