@@ -27,7 +27,7 @@ I use a YML file rather than a relational DB, because it is more easier to updat
 
 Here is an example of what it contains:
 
-![YAML Example](/docs/imgs/yaml.png)
+<img src="/docs/imgs/yaml.png" height="380px"/>
 
 ### Crawler (Python)
 
@@ -54,19 +54,16 @@ Let's see the E-R schema.
 UI has been implemented using HTML, CSS (Bootstrap), and JS (JQuery). <br/>
 On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL database and returns in JSON format to the front-end what it has asked for.
 
-Let's see the available APIs at this moment:
-
-| Route | It returns [...] analysed yesterday |
-| ----- | -------------- |
-| ``/api/countries`` | all countries |
-| ``/api/:country/groups`` | all _:country_'s political groups |
-| ``/api/:country/:social/accounts`` | all _:country_'s accounts |
-| ``/api/:social/groups/:group/info`` | info about _:group_ |
-| ``/api/:social/groups/:group/insights`` | insights about _:group_ |
-| ``/api/:social/accounts/:group/all`` | all accounts of _:group_ |
-| ``/api/:social/accounts/:handle/info`` | info about _:handle_ |
-| ``/api/:social/accounts/:handle/insights`` | insights about _:handle_ |
-| ``/api/:social/accounts/:handle/hashtags/:since/:limit`` | top _:limit_ used hashtags by _:handle_ since _:since_ |
+Let's see the available APIs at this moment:<br/>
+``/api/countries``: gets all countries analysed yesterday.<br/>
+``/api/:country/groups``: gets all _:country_'s political groups analysed yesterday.<br/>
+``/api/:country/:social/accounts``: gets all _:country_'s accounts analysed yesterday.<br/><br/>
+``/api/:social/groups/:group/info``: gets yesterday info about _:group_.<br/>
+``/api/:social/groups/:group/insights``: gets yesterday insights about _:group_.<br/><br/>
+``/api/:social/accounts/:group/all``: gets all accounts of _:group_ analysed yesterday.<br/>
+``/api/:social/accounts/:handle/info``: gets yesterday info about _:handle_.<br/>
+``/api/:social/accounts/:handle/insights``: gets yesterday insights about _:handle_.<br/>
+``/api/:social/accounts/:handle/hashtags/:since/:limit``: gets top _:limit_ used hashtags by _:handle_ since _:since_.<br/>
 
 ## Provided Statistics
 
@@ -97,21 +94,21 @@ Let's see the available APIs at this moment:
 ---
 ![Screen 2](/docs/snaps/screen-1.png)
 ---
-![Screen 4](/docs/snaps/screen-3.png)
+![Screen 3](/docs/snaps/screen-3.png)
 ---
-![Screen 5](/docs/snaps/screen-4.png)
+![Screen 4](/docs/snaps/screen-4.png)
 ***
-![Screen 6](/docs/snaps/screen-5.png)
+![Screen 5](/docs/snaps/screen-5.png)
 ---
-![Screen 7](/docs/snaps/screen-6.png)
+![Screen 6](/docs/snaps/screen-6.png)
 ---
-![Screen 8](/docs/snaps/screen-7.png)
+![Screen 7](/docs/snaps/screen-7.png)
 ---
-![Screen 9](/docs/snaps/screen-8.png)
+![Screen 8](/docs/snaps/screen-8.png)
 ***
-![Screen 11](/docs/snaps/screen-10.png)
+![Screen 9](/docs/snaps/screen-10.png)
 ---
-![Screen 12](/docs/snaps/screen-11.png)
+![Screen 10](/docs/snaps/screen-11.png)
 
 ## Getting Started
 
