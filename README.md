@@ -13,7 +13,7 @@ The structure of the project is designed below.
 All the components have been created on Docker.
 
 - **Health Checker | Python & YAML**: it checks every second the health of all Docker containers. On error (and online return) it sends notifications on Telegram and-or Slack.
-- **Crawler | Python & YAML**: once at a day it reads the YML file (countries, socials, and accounts we have to analyze), fetches all the data, and save them into the db.
+- **Crawler | Python & YAML**: once at a day it reads the YML file (countries, socials, and accounts we have to analyze), fetches all the data, and save them into the database.
 - **Database | MySQL**: stores all the data sent by the Crawler updated day-by-day.
 - **Charts | Grafana**: it makes and provides a lot of charts with data fetched from the database.
 - **UI | Node.Js, HTML, CSS, JS**: fetches and visualizes (even using Grafana) all the data from the database.
@@ -31,7 +31,7 @@ Here is an example of what it contains:
 
 ### Crawler (Python)
 
-Everyday, at **00:00 AM UTC**, it start a job with three main phases managed by ```Manager```.
+Everyday, at **00:00 AM UTC**, it starts a job with three main phases managed by ```Manager```.
 
 - **Reading**: it reads from the YML config file all the info mandatory to make stats. Precisely, it contains socials, countries and their respective political groups and accounts we want to analyze. 
 - **Fetching & Processing**: for each social and country, it retrieves data for each account for the day that just passed, and it puts them into an ```Account``` object (one for each account). Once made a list of accounts object, it instantiates a ```Group``` object. These objects make all the stats required for the last 24hrs.
