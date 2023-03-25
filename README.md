@@ -48,13 +48,13 @@ The DBMS which I have chosen to store all the data is MySQL, a relational DBMS. 
 Let's see the E-R and the Logical schema.
 
 <img src="/docs/uml/db.svg" width="750px"/>
-
+<br/>
 <img src="/docs/imgs/db.png" width="750px"/>
 
 ### UI (Node.js, HTML, CSS, JS)
 
 UI has been implemented using HTML, CSS (Bootstrap), and JS (JQuery). <br/>
-On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL database and returns to the front-end what it needs.
+On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL database and returns in JSON format to the front-end what it has asked for.
 
 Let's see the available APIs at this moment:
 
@@ -63,12 +63,12 @@ Let's see the available APIs at this moment:
 | ``/api/countries`` | gets all coutries (e.g. ITA) |
 | ``/api/:country/groups`` | gets all political groups of _:country_ analysed yesterday |
 | ``/api/:country/:social/accounts`` | gets all accounts of _:country_ on _:social_ analysed yesterday |
+| ``/api/:social/groups/:group/info`` | gets yesterday info about _:group_ on _:social_ |
+| ``/api/:social/groups/:group/insights`` | gets yesterday insights about _:group_ on _:social_ |
 | ``/api/:social/accounts/:group/all`` | gets all accounts in _:group_ on _:social_ analysed yesterday |
 | ``/api/:social/accounts/:handle/info`` | gets yesterday info about _:handle_ on _:social_ |
 | ``/api/:social/accounts/:handle/insights`` | gets yesterday insights about _:handle_ on _:social_ |
-| ``/api/:social/accounts/:handle/hashtags/:since/:limit`` | gets top _:limit_ used hashtags by _:handle_ since _:since_ |
-| ``/api/:social/groups/:group/info`` | gets yesterday info about _:group_ on _:social_ |
-| ``/api/:social/groups/:group/insights`` | gets yesterday insights about _:group_ on _:social_ |
+| ``/api/:social/accounts/:handle/hashtags/:since/:limit`` | gets top _:limit_ used hashtags by _:handle_ since _:since_ (``w``, ``m``, ``y``) |
 
 ## Provided Statistics
 
