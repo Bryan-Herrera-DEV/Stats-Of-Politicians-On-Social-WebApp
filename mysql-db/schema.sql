@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `twitter_dailystats_accounts` (
     `fetched_tweets_count` INT(11) NOT NULL,
     `tot_likes` INT(11) NOT NULL,
     `tot_retweets` INT(11) NOT NULL,
-    `tot_replies` INT(11) NOT NULL,
+    `tot_replies` INT(11) NOT NULL,z
     `avg_len` DECIMAL(11, 2) NOT NULL,
     `avg_likes` DECIMAL(11, 2) NOT NULL,
     `avg_retweets` DECIMAL(11, 2) NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `twitter_dailystats_accounts` (
     FOREIGN KEY (`handle`) REFERENCES twitter_accounts(`handle`) ON DELETE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS `twitter_dailystats_group` (
+CREATE TABLE IF NOT EXISTS `twitter_dailystats_groups` (
     `name` VARCHAR(32) NOT NULL,
     `date` DATE NOT NULL,
     `followers_count` INT(11) NOT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `twitter_dailystats_group` (
     FOREIGN KEY (`name`) REFERENCES political_groups(`name`) ON DELETE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS `twitter_hashtags_account` (
+CREATE TABLE IF NOT EXISTS `twitter_hashtags_accounts` (
     `id` INT(11) AUTO_INCREMENT NOT NULL,
     `handle` VARCHAR(255) NOT NULL,
     `hashtag` VARCHAR(128) NOT NULL,
