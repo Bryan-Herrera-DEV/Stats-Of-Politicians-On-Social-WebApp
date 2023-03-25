@@ -7,7 +7,7 @@ class TwitterHelper(Helper):
         self.__db = MySql()
 
     def __insert_account_used_hashtag(self, account, date, hashtag):
-        self.__db.insert('twitter_hashtags_account', {
+        self.__db.insert('twitter_hashtags_accounts', {
                 'date': date.strftime('%Y-%m-%d'),
                 'handle': account.username,
                 'hashtag': hashtag.lower()
@@ -32,7 +32,7 @@ class TwitterHelper(Helper):
         )
 
     def __insert_daily_group_insights(self, group, date):
-        self.__db.insert('twitter_dailystats_group', {
+        self.__db.insert('twitter_dailystats_groups', {
                 'name': group.name,
                 'date': date.strftime('%Y-%m-%d'),
                 'fetched_tweets_count': group.get_total_fetched_tweet_count(),
