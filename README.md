@@ -44,14 +44,10 @@ It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **F
 
 ### Database (MySQL)
 
-The DBMS which I have chosen to store all the data is MySQL, a relational DBMS. <br/>
+The DBMS which I have chosen to store all the data is MySQL, a relational DBMS.<br/>
 Let's see the E-R schema.
 
 <img src="/docs/uml/db.svg" width="750px"/>
-
-And the Logical schema.
-
-<img src="/docs/imgs/db.png" width="750px"/>
 
 ### UI (Node.js, HTML, CSS, JS)
 
@@ -64,12 +60,12 @@ Let's see the available APIs at this moment:
 | ----- | --------------- |
 | ``/api/countries`` | all coutries (e.g. ITA) |
 | ``/api/:country/groups`` | all political groups of _:country_ analysed yesterday |
-| ``/api/:country/:social/accounts`` | all _:country_'s accounts analysed on _:social_ yesterday |
-| ``/api/:social/groups/:group/info`` | yesterday info about _:group_ on _:social_ |
-| ``/api/:social/groups/:group/insights`` | yesterday insights about _:group_ on _:social_ |
-| ``/api/:social/accounts/:group/all`` | all accounts of _:group_ analysed yesterday on _:social_ |
-| ``/api/:social/accounts/:handle/info`` | yesterday info about _:handle_ on _:social_ |
-| ``/api/:social/accounts/:handle/insights`` | yesterday insights about _:handle_ on _:social_ |
+| ``/api/:country/:social/accounts`` | all _:country_'s accounts analysed yesterday |
+| ``/api/:social/groups/:group/info`` | yesterday info about _:group_ |
+| ``/api/:social/groups/:group/insights`` | yesterday insights about _:group_ |
+| ``/api/:social/accounts/:group/all`` | all accounts of _:group_ analysed yesterday |
+| ``/api/:social/accounts/:handle/info`` | yesterday info about _:handle_ |
+| ``/api/:social/accounts/:handle/insights`` | yesterday insights about _:handle_ |
 | ``/api/:social/accounts/:handle/hashtags/:since/:limit`` | top _:limit_ used hashtags by _:handle_ since _:since_ |
 
 ## Provided Statistics
@@ -84,14 +80,15 @@ Let's see the available APIs at this moment:
     - Average Replies (yesterday)
     - Average Length of a Tweet (in characters)
     - Average Sentiment Analysis (Positive, Negative, Neutral, Null) (yesterday) <br/><br/>
+    - Charts of Compare Among All Political Groups (followers, likes, etc.)<br/><br/>
     - Chart with the History of Number of Analysed Tweets Over Time
     - Chart with the History of Total Followers Over Time
     - Chart with the History of Avg Tweets Length Over Time
     - Chart with the History of Avg Likes Over Time
     - Chart with the History of Avg Retweets Over Time
     - Chart with the History of Avg Replies Over Time
-    - Top 5 Most Used Hashtags **(just for accounts)** (last week, last month, last year) <br/><br/>
-    - Charts of Compare Among All Political Groups (followers, likes, etc.)
+    - Top 5 Most Used Hashtags **(just for accounts)** (last week, last month, last year) 
+    
 
 
 ## Light Demo
