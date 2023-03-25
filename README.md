@@ -56,16 +56,16 @@ On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL
 
 Let's see the available APIs at this moment:
 
-| Route | It returns ... |
-| ----- | --------------- |
-| ``/api/countries`` | all coutries (e.g. ITA) |
-| ``/api/:country/groups`` | all political groups of _:country_ analysed yesterday |
-| ``/api/:country/:social/accounts`` | all _:country_'s accounts analysed yesterday |
-| ``/api/:social/groups/:group/info`` | yesterday info about _:group_ |
-| ``/api/:social/groups/:group/insights`` | yesterday insights about _:group_ |
-| ``/api/:social/accounts/:group/all`` | all accounts of _:group_ analysed yesterday |
-| ``/api/:social/accounts/:handle/info`` | yesterday info about _:handle_ |
-| ``/api/:social/accounts/:handle/insights`` | yesterday insights about _:handle_ |
+| Route | It returns [...] analysed yesterday |
+| ----- | -------------- |
+| ``/api/countries`` | all countries |
+| ``/api/:country/groups`` | all _:country_'s political groups |
+| ``/api/:country/:social/accounts`` | all _:country_'s accounts |
+| ``/api/:social/groups/:group/info`` | info about _:group_ |
+| ``/api/:social/groups/:group/insights`` | insights about _:group_ |
+| ``/api/:social/accounts/:group/all`` | all accounts of _:group_ |
+| ``/api/:social/accounts/:handle/info`` | info about _:handle_ |
+| ``/api/:social/accounts/:handle/insights`` | insights about _:handle_ |
 | ``/api/:social/accounts/:handle/hashtags/:since/:limit`` | top _:limit_ used hashtags by _:handle_ since _:since_ |
 
 ## Provided Statistics
@@ -97,8 +97,6 @@ Let's see the available APIs at this moment:
 ---
 ![Screen 2](/docs/snaps/screen-1.png)
 ---
-![Screen 3](/docs/snaps/screen-2.png)
----
 ![Screen 4](/docs/snaps/screen-3.png)
 ---
 ![Screen 5](/docs/snaps/screen-4.png)
@@ -110,14 +108,10 @@ Let's see the available APIs at this moment:
 ![Screen 8](/docs/snaps/screen-7.png)
 ---
 ![Screen 9](/docs/snaps/screen-8.png)
----
-![Screen 10](/docs/snaps/screen-9.png)
 ***
 ![Screen 11](/docs/snaps/screen-10.png)
 ---
 ![Screen 12](/docs/snaps/screen-11.png)
-***
-![Screen 13](/docs/snaps/screen-12.png)
 
 ## Getting Started
 
