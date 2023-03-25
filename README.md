@@ -54,7 +54,8 @@ Let's see the E-R schema.
 UI has been implemented using HTML, CSS (Bootstrap), and JS (JQuery). <br/>
 On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL database and returns in JSON format to the front-end what it has asked for.
 
-Let's see the available APIs at this moment:<br/>
+Let's see the available APIs at this moment:
+
 ``/api/countries``: gets all countries analysed yesterday.<br/>
 ``/api/:country/groups``: gets all _:country_'s political groups analysed yesterday.<br/>
 ``/api/:country/:social/accounts``: gets all _:country_'s accounts analysed yesterday.<br/><br/>
