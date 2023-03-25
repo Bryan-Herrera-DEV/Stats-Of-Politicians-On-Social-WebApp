@@ -45,10 +45,12 @@ It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **F
 ### Database (MySQL)
 
 The DBMS which I have chosen to store all the data is MySQL, a relational DBMS. <br/>
-Let's see the E-R and the Logical schema.
+Let's see the E-R schema.
 
 <img src="/docs/uml/db.svg" width="750px"/>
-<br/>
+
+And the Logical schema.
+
 <img src="/docs/imgs/db.png" width="750px"/>
 
 ### UI (Node.js, HTML, CSS, JS)
@@ -58,17 +60,17 @@ On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL
 
 Let's see the available APIs at this moment:
 
-| Route | Description |
+| Route | It returns ... |
 | ----- | --------------- |
-| ``/api/countries`` | gets all coutries (e.g. ITA) |
-| ``/api/:country/groups`` | gets all political groups of _:country_ analysed yesterday |
-| ``/api/:country/:social/accounts`` | gets all accounts of _:country_ on _:social_ analysed yesterday |
-| ``/api/:social/groups/:group/info`` | gets yesterday info about _:group_ on _:social_ |
-| ``/api/:social/groups/:group/insights`` | gets yesterday insights about _:group_ on _:social_ |
-| ``/api/:social/accounts/:group/all`` | gets all accounts in _:group_ on _:social_ analysed yesterday |
-| ``/api/:social/accounts/:handle/info`` | gets yesterday info about _:handle_ on _:social_ |
-| ``/api/:social/accounts/:handle/insights`` | gets yesterday insights about _:handle_ on _:social_ |
-| ``/api/:social/accounts/:handle/hashtags/:since/:limit`` | gets top _:limit_ used hashtags by _:handle_ since _:since_ (``w``, ``m``, ``y``) |
+| ``/api/countries`` | all coutries (e.g. ITA) |
+| ``/api/:country/groups`` | all political groups of _:country_ analysed yesterday |
+| ``/api/:country/:social/accounts`` | all _:country_'s accounts analysed on _:social_ yesterday |
+| ``/api/:social/groups/:group/info`` | yesterday info about _:group_ on _:social_ |
+| ``/api/:social/groups/:group/insights`` | yesterday insights about _:group_ on _:social_ |
+| ``/api/:social/accounts/:group/all`` | all accounts of _:group_ analysed yesterday on _:social_ |
+| ``/api/:social/accounts/:handle/info`` | yesterday info about _:handle_ on _:social_ |
+| ``/api/:social/accounts/:handle/insights`` | yesterday insights about _:handle_ on _:social_ |
+| ``/api/:social/accounts/:handle/hashtags/:since/:limit`` | top _:limit_ used hashtags by _:handle_ since _:since_ |
 
 ## Provided Statistics
 
