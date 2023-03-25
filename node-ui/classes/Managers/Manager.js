@@ -4,14 +4,14 @@ class Manager {
 
     static _db = new MySql();
     
-    static async getCountries() {
+    async getCountries() {
         return await Manager._db.getRows(
             'SELECT DISTINCT(country) \
             FROM political_groups'
         );
     }
 
-    static async getGroups(country, date) {
+    async getGroups(country, date) {
         return await Manager._db.getRows(
             'SELECT * \
             FROM political_groups \
@@ -20,7 +20,7 @@ class Manager {
         );
     }
 
-    static async getAccounts() {
+    async getAccounts() {
         throw new Error('Method must be implemented.');
     }
 }
