@@ -18,7 +18,7 @@ All the components have been created on Docker.
 - **Charts | Grafana**: it makes and provides a lot of charts with data fetched from the database.
 - **UI | Node.Js, HTML, CSS, JS**: fetches and visualizes (even using Grafana) all the data from the database.
 
-![Project Schema](/docs/imgs/schema.png)
+<img src="/docs/imgs/schema.png" width="725px"/>
 
 ### Config File (YML)
 
@@ -27,49 +27,48 @@ I use a YML file rather than a relational DB, because it is more easier to updat
 
 Here is an example of what it contains:
 
-![YAML EXAMPLE](/docs/imgs/yaml.png)
+![YAML Example](/docs/imgs/yaml.png)
 
 ### Crawler (Python)
 
 Everyday, at **00:00 AM UTC**, it starts a job with three main phases managed by ```Manager```.
 
-- **Reading**: it reads from the YML config file all the info mandatory to make stats. Precisely, it contains socials, countries and their respective political groups and accounts we want to analyze. 
-- **Fetching & Processing**: for each social and country, it retrieves data for each account for the day that just passed, and it puts them into an ```Account``` object (one for each account). Once made a list of accounts object, it instantiates a ```Group``` object. These objects make all the stats required for the last 24hrs.
-- **Saving**: once made all accounts and politics group objects associated with a given country on a given social, the data are saved throught a ```Helper``` into a database.
+- **Reading**: it reads from the YML config file all the info necessary to make stats. Precisely, it contains socials, countries and their respective political groups and accounts we want to analyze. 
+- **Fetching & Processing**: for each social and country, it retrieves data for each account for the day that just passed, and it puts them into an ```Account``` object (one for each account). Once made a list of accounts' objects, it instantiates a ```Group``` object. These objects make all the stats required for the last 24hrs.
+- **Saving**: once made all accounts and politics groups' objects associated with a given country on a given social, the data are saved throught a ```Helper``` into a database.
 
 Below is illustrated a semplified UML of the crawler. <br/>
 It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **Factory Method Design Pattern**. 
 
-![Crawler UML](/docs/uml/crawler.svg)
+<img src="/docs/uml/crawler.svg" width="750px"/>
 
 ### Database (MySQL)
 
 The DBMS which I have chosen to store all the data is MySQL, a relational DBMS. <br/>
-It is best suitable for simple operations like write and reading, it is reliable, simple, and faster, etc. <br/>
+Let's see the E-R and the Logical schema.
 
-![E-R Schema](/docs/uml/db.svg)
----
-![Logical Schema](/docs/imgs/db.png)
+<img src="/docs/uml/db.svg" width="750px"/>
 
-### UI (Node, HTML, CSS, JS)
+<img src="/docs/imgs/db.png" width="750px"/>
 
-Node.Js back-end connects to MySQL. <br/>
+### UI (Node.js, HTML, CSS, JS)
+
 UI has been implemented using HTML, CSS (Bootstrap), and JS (JQuery). <br/>
-On request, via REST APIs using AJAX, the back-end returns to the front-end what we need.
+On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL database and returns to the front-end what it needs.
 
 Let's see the available APIs at this moment:
 
-``/api/countries``: gets all coutries (e.g. ITA).<br/>
-``/api/:country/groups``: gets all political groups of :country analysed yesterday.<br/>
-``/api/:country/:social/accounts``: gets all accounts of :country on :social analysed yesterday.<br/>
-``/api/:social/accounts/:group/all``: gets all accounts in :group on :social analysed yesterday.<br/>
-
-``/api/:social/accounts/:handle/info``: gets yesterday info about :handle on :social.<br/>
-``/api/:social/accounts/:handle/insights``: gets yesterday insights about :handle on :social.<br/>
-``/api/:social/accounts/:handle/hashtags/:since/:limit``: gets top :limit used hashtags by :handle since :since.<br/>
-
-``/api/:social/groups/:group/info``: gets yesterday info about :group on :social.<br/>
-``/api/:social/groups/:group/insights``: gets yesterday insights about :group on :social.<br/>
+| Route | Description |
+| ----- | --------------- |
+| ``/api/countries`` | gets all coutries (e.g. ITA) |
+| ``/api/:country/groups`` | gets all political groups of _:country_ analysed yesterday |
+| ``/api/:country/:social/accounts`` | gets all accounts of _:country_ on _:social_ analysed yesterday |
+| ``/api/:social/accounts/:group/all`` | gets all accounts in _:group_ on _:social_ analysed yesterday |
+| ``/api/:social/accounts/:handle/info`` | gets yesterday info about _:handle_ on _:social_ |
+| ``/api/:social/accounts/:handle/insights`` | gets yesterday insights about _:handle_ on _:social_ |
+| ``/api/:social/accounts/:handle/hashtags/:since/:limit`` | gets top _:limit_ used hashtags by _:handle_ since _:since_ |
+| ``/api/:social/groups/:group/info`` | gets yesterday info about _:group_ on _:social_ |
+| ``/api/:social/groups/:group/insights`` | gets yesterday insights about _:group_ on _:social_ |
 
 ## Provided Statistics
 
@@ -127,7 +126,7 @@ So that the repository is successfully cloned and project run smoothly, a few st
 
 ### Requisites
 
-* A good and stable internet connection. 
+* A stable internet connection. 
 * Use of Linux, MacOS, or Windows WSL.
 * Having a Twitter Developer Account with related keys and tokens (for Twitter).
 * Having a Telegram Bot (with related channel) or a Slack WebHook.
