@@ -1,0 +1,17 @@
+apiVersion: 1
+
+datasources:
+  - name: Politics-Data
+    orgId: 1
+    type: mysql
+    url: mysql-politics:3306
+    user: root
+    database: politics_stats
+    jsonData:
+      maxOpenConns: 0 
+      maxIdleConns: 2 
+      connMaxLifetime: 14400 
+    secureJsonData:
+      password: Jm9Ca9Sh6
+    version: 1
+    editable: true
