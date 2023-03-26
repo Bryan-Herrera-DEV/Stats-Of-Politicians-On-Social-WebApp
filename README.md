@@ -143,6 +143,10 @@ So that the repository is successfully cloned and the project runs smoothly, a f
    $ bash run.sh
 ``` 
 
+Then, to import the dashboard:
+1. Go to [Grafana Login](https://localhost:3000/login) and sign in.
+2. Go to [Grafana Dashboard Import](https://localhost:3000/dashboard/import) and upload ``/grafana-charts/dashboard.json``.
+
 ### Useful Links
 
 | Container | Link |
