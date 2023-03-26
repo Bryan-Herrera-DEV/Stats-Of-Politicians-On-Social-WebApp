@@ -34,17 +34,11 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
       - $PWD/grafana-charts/:/etc/grafana/
-    environment:
-      GF_DATABASE_TYPE: mysql
-      GF_DATABASE_HOST: mysql-politics:3306
-      GF_DATABASE_NAME: politics_stats
-      GF_DATABASE_USER: root
-      GF_DATABASE_PASSWORD: Jm9Ca9Sh6
-      GF_DATABASE_SSL_MODE: enable
     deploy:
       restart_policy:
         condition: on-failure
         max_attempts: 2
+        delay: 5s
 
   #-----------------------#
   #     Crawler Python    #
