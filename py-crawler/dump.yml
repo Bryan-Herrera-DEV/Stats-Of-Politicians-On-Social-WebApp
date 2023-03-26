@@ -14,13 +14,13 @@ ITA_groups:
       name: M5S
       logo_color: '#d2b42f'
   - group:
-      name: PD
+      name: PD-IDP
       logo_color: '#be2a2a'
   - group:
-      name: A-IV-RE
+      name: AZ-IV-RE
       logo_color: '#c77ca4'
   - group:
-      name: FI
+      name: FI-PPE
       logo_color: '#48cff5'
   - group:
       name: LEGA
@@ -36,6 +36,18 @@ ITA_twitter_accounts:
   - account:
       handle: NFratoianni
       group: AVS
+  - account:
+      handle: AngeloBonelli1
+      group: AVS
+  - account:
+      handle: EleonoraEvi
+      group: AVS
+  - account:
+      handle: BettaPiccolotti
+      group: AVS
+  - account:
+      handle: cucchi_ilaria
+      group: AVS
 
   - account: 
       handle: GiuseppeConteIT
@@ -43,42 +55,84 @@ ITA_twitter_accounts:
   - account:
       handle: c_appendino
       group: M5S
+  - account:
+      handle: SergioCosta_Gen
+      group: M5S
+  - account:
+      handle: SPatuanelli
+      group: M5S
+  - account:
+      handle: MariaDomenicaC4
+      group: M5S
+  - account:
+      handle: BaldinoVittoria
+      group: M5S
 
   - account: 
       handle: ellyesse
-      group: PD
+      group: PD-IDP
   - account: 
       handle: lauraboldrini
-      group: PD
+      group: PD-IDP
+  - account: 
+      handle: dariofrance
+      group: PD-IDP
   - account: 
       handle: AndreaOrlandosp
-      group: PD
+      group: PD-IDP
   - account: 
       handle: robersperanza
-      group: PD
+      group: PD-IDP
+  - account: 
+      handle: serracchiani
+      group: PD-IDP
+  - account: 
+      handle: BeaLorenzin
+      group: PD-IDP
 
   - account: 
       handle: CarloCalenda
-      group: AZIONE-IV
-  - account: 
-      handle: meb
-      group: AZIONE-IV
-  - account: 
-      handle: mara_carfagna
-      group: AZIONE-IV
-  - account: 
-      handle: msgelmini
-      group: AZIONE-IV
+      group: AZ-IV-RE
   - account: 
       handle: matteorenzi
-      group: AZIONE-IV
+      group: AZ-IV-RE
+  - account: 
+      handle: meb
+      group: AZ-IV-RE
+  - account: 
+      handle: mara_carfagna
+      group: AZ-IV-RE
+  - account: 
+      handle: msgelmini
+      group: AZ-IV-RE
+  - account: 
+      handle: ivanscalfarotto
+      group: AZ-IV-RE
+  - account: 
+      handle: marattin
+      group: AZ-IV-RE
 
   - account: 
       handle: berlusconi
-      group: FI
+      group: FI-PPE
   - account: 
       handle: Antonio_Tajani
-      group: FI
+      group: FI-PPE
+  - account: 
+      handle: gasparripdl
+      group: FI-PPE
+  - account: 
+      handle: giorgiomule
+      group: FI-PPE
+  - account: 
+      handle: LiciaRonzulli
+      group: FI-PPE
+  - account: 
+      handle: Min_Casellati
+      group: FI-PPE
+  - account: 
+      handle: aleCattaneo79
+      group: FI-PPE
     
   - account: 
       handle: matteosalvinimi
@@ -88,6 +142,15 @@ ITA_twitter_accounts:
       group: LEGA
   - account: 
       handle: Fontana3Lorenzo
+      group: LEGA
+  - account: 
+      handle: borghi_claudio
+      group: LEGA
+  - account: 
+      handle: lauraravetto
+      group: LEGA
+  - account: 
+      handle: giamma71
       group: LEGA
 
   - account: 
@@ -102,4 +165,16 @@ ITA_twitter_accounts:
       group: FDI
   - account: 
       handle: DSantanche
+      group: FDI
+  - account: 
+      handle: Ignazio_LaRussa
+      group: FDI
+  - account: 
+      handle: grotondi
+      group: FDI
+  - account: 
+      handle: LucioMalan
+      group: FDI
+  - account: 
+      handle: Nello_Musumeci
       group: FDI
