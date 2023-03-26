@@ -51,6 +51,8 @@ Let's see a light version of the E-R schema.
 
 <img src="/docs/uml/db.svg" width="750px"/>
 
+In case of an update in MySQL settings (environments variables in ``docker-compose.yml`` such as ``host``, ``port``, ``user``, etc.) don't forget to update ``/grafana-charts/provisioning/datasources/default.yml`` which is useful to import the data source into Grafana.
+
 ### UI (Node.js, HTML, CSS, JS)
 
 UI has been implemented using HTML, CSS (Bootstrap), and JS (JQuery). <br/>
