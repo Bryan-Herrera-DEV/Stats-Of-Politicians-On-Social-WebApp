@@ -46,12 +46,13 @@ It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **F
 ### Database (MySQL)
 
 The DBMS I have chosen to store all the data is in MySQL, a relational DBMS.<br/>
-The Logical Schema can be found in ```/docs/imgs/db.png```.<br/>
+The Logical Schema can be found in ```/docs/imgs/db.png```.
+
+In case of an update in MySQL settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``database name``, ``user``, ``password``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is useful to import the data source into Grafana.
+
 Let's see a light version of the E-R schema.
 
 <img src="/docs/uml/db.svg" width="750px"/>
-
-In case of an update in MySQL settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``database name``, ``user``, ``password``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is useful to import the data source into Grafana.
 
 ### UI (Node.js, HTML, CSS, JS)
 
