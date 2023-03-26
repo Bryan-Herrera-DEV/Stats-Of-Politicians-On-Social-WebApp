@@ -40,7 +40,7 @@
       "id": 12,
       "panels": [
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -127,7 +127,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "FI"
+                  "options": "FI-PPE"
                 },
                 "properties": [
                   {
@@ -157,7 +157,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "AZIONE-IV"
+                  "options": "AZ-IV-RE"
                 },
                 "properties": [
                   {
@@ -187,7 +187,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "PD"
+                  "options": "PD-IDP"
                 },
                 "properties": [
                   {
@@ -224,7 +224,7 @@
               "group": [],
               "metricColumn": "name",
               "rawQuery": false,
-              "rawSql": "SELECT\n  date AS \"time\",\n  name AS metric,\n  avg_len\nFROM twitter_dailystats_group\nWHERE\n  $__timeFilter(date)\nORDER BY date",
+              "rawSql": "SELECT\n  date AS \"time\",\n  name AS metric,\n  avg_len\nFROM twitter_dailystats_groups\nWHERE\n  $__timeFilter(date)\nORDER BY date",
               "refId": "A",
               "select": [
                 [
@@ -236,7 +236,7 @@
                   }
                 ]
               ],
-              "table": "twitter_dailystats_group",
+              "table": "twitter_dailystats_groups",
               "timeColumn": "date",
               "timeColumnType": "date",
               "where": [
@@ -261,7 +261,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -348,7 +348,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "FI"
+                  "options": "FI-PPE"
                 },
                 "properties": [
                   {
@@ -378,7 +378,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "AZIONE-IV"
+                  "options": "AZ-IV-RE"
                 },
                 "properties": [
                   {
@@ -408,7 +408,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "PD"
+                  "options": "PD-IDP"
                 },
                 "properties": [
                   {
@@ -445,7 +445,7 @@
               "group": [],
               "metricColumn": "name",
               "rawQuery": false,
-              "rawSql": "SELECT\n  date AS \"time\",\n  name AS metric,\n  fetched_tweets_count\nFROM twitter_dailystats_group\nWHERE\n  $__timeFilter(date)\nORDER BY date",
+              "rawSql": "SELECT\n  date AS \"time\",\n  name AS metric,\n  fetched_tweets_count\nFROM twitter_dailystats_groups\nWHERE\n  $__timeFilter(date)\nORDER BY date",
               "refId": "A",
               "select": [
                 [
@@ -457,7 +457,7 @@
                   }
                 ]
               ],
-              "table": "twitter_dailystats_group",
+              "table": "twitter_dailystats_groups",
               "timeColumn": "date",
               "timeColumnType": "date",
               "where": [
@@ -482,7 +482,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -570,7 +570,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "FI"
+                  "options": "FI-PPE"
                 },
                 "properties": [
                   {
@@ -600,7 +600,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "AZIONE-IV"
+                  "options": "AZ-IV-RE"
                 },
                 "properties": [
                   {
@@ -630,7 +630,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "PD"
+                  "options": "PD-IDP"
                 },
                 "properties": [
                   {
@@ -667,7 +667,7 @@
               "group": [],
               "metricColumn": "name",
               "rawQuery": false,
-              "rawSql": "SELECT\n  date AS \"time\",\n  name AS metric,\n  followers_count\nFROM twitter_dailystats_group\nWHERE\n  $__timeFilter(date)\nORDER BY date",
+              "rawSql": "SELECT\n  date AS \"time\",\n  name AS metric,\n  followers_count\nFROM twitter_dailystats_groups\nWHERE\n  $__timeFilter(date)\nORDER BY date",
               "refId": "A",
               "select": [
                 [
@@ -679,7 +679,7 @@
                   }
                 ]
               ],
-              "table": "twitter_dailystats_group",
+              "table": "twitter_dailystats_groups",
               "timeColumn": "date",
               "timeColumnType": "date",
               "where": [
@@ -704,7 +704,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -791,7 +791,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "FI"
+                  "options": "FI-PPE"
                 },
                 "properties": [
                   {
@@ -821,7 +821,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "AZIONE-IV"
+                  "options": "AZ-IV-RE"
                 },
                 "properties": [
                   {
@@ -851,7 +851,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "PD"
+                  "options": "PD-IDP"
                 },
                 "properties": [
                   {
@@ -888,7 +888,7 @@
               "group": [],
               "metricColumn": "name",
               "rawQuery": false,
-              "rawSql": "SELECT\n  date AS \"time\",\n  name AS metric,\n  avg_retweets\nFROM twitter_dailystats_group\nWHERE\n  $__timeFilter(date)\nORDER BY date",
+              "rawSql": "SELECT\n  date AS \"time\",\n  name AS metric,\n  avg_retweets\nFROM twitter_dailystats_groups\nWHERE\n  $__timeFilter(date)\nORDER BY date",
               "refId": "A",
               "select": [
                 [
@@ -900,7 +900,7 @@
                   }
                 ]
               ],
-              "table": "twitter_dailystats_group",
+              "table": "twitter_dailystats_groups",
               "timeColumn": "date",
               "timeColumnType": "date",
               "where": [
@@ -925,7 +925,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1012,7 +1012,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "FI"
+                  "options": "FI-PPE"
                 },
                 "properties": [
                   {
@@ -1042,7 +1042,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "AZIONE-IV"
+                  "options": "AZ-IV-RE"
                 },
                 "properties": [
                   {
@@ -1072,7 +1072,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "PD"
+                  "options": "PD-IDP"
                 },
                 "properties": [
                   {
@@ -1109,7 +1109,7 @@
               "group": [],
               "metricColumn": "name",
               "rawQuery": false,
-              "rawSql": "SELECT\n  date AS \"time\",\n  name AS metric,\n  avg_likes\nFROM twitter_dailystats_group\nWHERE\n  $__timeFilter(date)\nORDER BY date",
+              "rawSql": "SELECT\n  date AS \"time\",\n  name AS metric,\n  avg_likes\nFROM twitter_dailystats_groups\nWHERE\n  $__timeFilter(date)\nORDER BY date",
               "refId": "A",
               "select": [
                 [
@@ -1121,7 +1121,7 @@
                   }
                 ]
               ],
-              "table": "twitter_dailystats_group",
+              "table": "twitter_dailystats_groups",
               "timeColumn": "date",
               "timeColumnType": "date",
               "where": [
@@ -1146,7 +1146,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1233,7 +1233,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "FI"
+                  "options": "FI-PPE"
                 },
                 "properties": [
                   {
@@ -1263,7 +1263,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "AZIONE-IV"
+                  "options": "AZ-IV-RE"
                 },
                 "properties": [
                   {
@@ -1293,7 +1293,7 @@
               {
                 "matcher": {
                   "id": "byName",
-                  "options": "PD"
+                  "options": "PD-IDP"
                 },
                 "properties": [
                   {
@@ -1330,7 +1330,7 @@
               "group": [],
               "metricColumn": "name",
               "rawQuery": false,
-              "rawSql": "SELECT\n  date AS \"time\",\n  name AS metric,\n  avg_replies\nFROM twitter_dailystats_group\nWHERE\n  $__timeFilter(date)\nORDER BY date",
+              "rawSql": "SELECT\n  date AS \"time\",\n  name AS metric,\n  avg_replies\nFROM twitter_dailystats_groups\nWHERE\n  $__timeFilter(date)\nORDER BY date",
               "refId": "A",
               "select": [
                 [
@@ -1342,7 +1342,7 @@
                   }
                 ]
               ],
-              "table": "twitter_dailystats_group",
+              "table": "twitter_dailystats_groups",
               "timeColumn": "date",
               "timeColumnType": "date",
               "where": [
@@ -1382,7 +1382,7 @@
       "id": 10,
       "panels": [
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1457,7 +1457,7 @@
               "group": [],
               "metricColumn": "none",
               "rawQuery": false,
-              "rawSql": "SELECT\n  date AS \"time\",\n  followers_count\nFROM twitter_dailystats_group\nWHERE\n  $__timeFilter(date) AND\n  name = '$group_name'\nORDER BY date",
+              "rawSql": "SELECT\n  date AS \"time\",\n  followers_count\nFROM twitter_dailystats_groups\nWHERE\n  $__timeFilter(date) AND\n  name = '$group_name'\nORDER BY date",
               "refId": "A",
               "select": [
                 [
@@ -1469,7 +1469,7 @@
                   }
                 ]
               ],
-              "table": "twitter_dailystats_group",
+              "table": "twitter_dailystats_groups",
               "timeColumn": "date",
               "timeColumnType": "date",
               "where": [
@@ -1496,7 +1496,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1572,7 +1572,7 @@
               "group": [],
               "metricColumn": "none",
               "rawQuery": false,
-              "rawSql": "SELECT\n  date AS \"time\",\n  fetched_tweets_count\nFROM twitter_dailystats_group\nWHERE\n  $__timeFilter(date) AND\n  name = '$group_name'\nORDER BY date",
+              "rawSql": "SELECT\n  date AS \"time\",\n  fetched_tweets_count\nFROM twitter_dailystats_groups\nWHERE\n  $__timeFilter(date) AND\n  name = '$group_name'\nORDER BY date",
               "refId": "A",
               "select": [
                 [
@@ -1584,7 +1584,7 @@
                   }
                 ]
               ],
-              "table": "twitter_dailystats_group",
+              "table": "twitter_dailystats_groups",
               "timeColumn": "date",
               "timeColumnType": "date",
               "where": [
@@ -1611,7 +1611,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1686,7 +1686,7 @@
               "group": [],
               "metricColumn": "none",
               "rawQuery": false,
-              "rawSql": "SELECT\n  date AS \"time\",\n  avg_len\nFROM twitter_dailystats_group\nWHERE\n  $__timeFilter(date) AND\n  name = '$group_name'\nORDER BY date",
+              "rawSql": "SELECT\n  date AS \"time\",\n  avg_len\nFROM twitter_dailystats_groups\nWHERE\n  $__timeFilter(date) AND\n  name = '$group_name'\nORDER BY date",
               "refId": "A",
               "select": [
                 [
@@ -1698,7 +1698,7 @@
                   }
                 ]
               ],
-              "table": "twitter_dailystats_group",
+              "table": "twitter_dailystats_groups",
               "timeColumn": "date",
               "timeColumnType": "date",
               "where": [
@@ -1725,7 +1725,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1800,7 +1800,7 @@
               "group": [],
               "metricColumn": "none",
               "rawQuery": false,
-              "rawSql": "SELECT\n  date AS \"time\",\n  avg_likes\nFROM twitter_dailystats_group\nWHERE\n  $__timeFilter(date) AND\n  name = '$group_name'\nORDER BY date",
+              "rawSql": "SELECT\n  date AS \"time\",\n  avg_likes\nFROM twitter_dailystats_groups\nWHERE\n  $__timeFilter(date) AND\n  name = '$group_name'\nORDER BY date",
               "refId": "A",
               "select": [
                 [
@@ -1812,7 +1812,7 @@
                   }
                 ]
               ],
-              "table": "twitter_dailystats_group",
+              "table": "twitter_dailystats_groups",
               "timeColumn": "date",
               "timeColumnType": "date",
               "where": [
@@ -1839,7 +1839,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1914,7 +1914,7 @@
               "group": [],
               "metricColumn": "none",
               "rawQuery": false,
-              "rawSql": "SELECT\n  date AS \"time\",\n  avg_retweets\nFROM twitter_dailystats_group\nWHERE\n  $__timeFilter(date) AND\n  name = '$group_name'\nORDER BY date",
+              "rawSql": "SELECT\n  date AS \"time\",\n  avg_retweets\nFROM twitter_dailystats_groups\nWHERE\n  $__timeFilter(date) AND\n  name = '$group_name'\nORDER BY date",
               "refId": "A",
               "select": [
                 [
@@ -1926,7 +1926,7 @@
                   }
                 ]
               ],
-              "table": "twitter_dailystats_group",
+              "table": "twitter_dailystats_groups",
               "timeColumn": "date",
               "timeColumnType": "date",
               "where": [
@@ -1953,7 +1953,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2028,7 +2028,7 @@
               "group": [],
               "metricColumn": "none",
               "rawQuery": false,
-              "rawSql": "SELECT\n  date AS \"time\",\n  avg_replies\nFROM twitter_dailystats_group\nWHERE\n  $__timeFilter(date) AND\n  name = '$group_name'\nORDER BY date",
+              "rawSql": "SELECT\n  date AS \"time\",\n  avg_replies\nFROM twitter_dailystats_groups\nWHERE\n  $__timeFilter(date) AND\n  name = '$group_name'\nORDER BY date",
               "refId": "A",
               "select": [
                 [
@@ -2040,7 +2040,7 @@
                   }
                 ]
               ],
-              "table": "twitter_dailystats_group",
+              "table": "twitter_dailystats_groups",
               "timeColumn": "date",
               "timeColumnType": "date",
               "where": [
@@ -2082,7 +2082,7 @@
       "id": 4,
       "panels": [
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2196,7 +2196,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2311,7 +2311,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2425,7 +2425,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2539,7 +2539,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2653,7 +2653,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "MySQL",
+          "datasource": "Politics-Data",
           "fieldConfig": {
             "defaults": {
               "color": {
