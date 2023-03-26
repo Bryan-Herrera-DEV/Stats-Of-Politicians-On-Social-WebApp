@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `twitter_dailystats_accounts` (
     `fetched_tweets_count` INT(11) NOT NULL,
     `tot_likes` INT(11) NOT NULL,
     `tot_retweets` INT(11) NOT NULL,
-    `tot_replies` INT(11) NOT NULL,z
+    `tot_replies` INT(11) NOT NULL,
     `avg_len` DECIMAL(11, 2) NOT NULL,
     `avg_likes` DECIMAL(11, 2) NOT NULL,
     `avg_retweets` DECIMAL(11, 2) NOT NULL,
