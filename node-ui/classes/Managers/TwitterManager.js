@@ -37,7 +37,7 @@ class TwitterManager extends Manager {
     async getAccountHashtags(username, date, limit) {
         return await TwitterManager._db.getRows(
             `SELECT hashtag, COUNT(*) AS occurrences \
-            FROM twitter_hashtags_account \
+            FROM twitter_hashtags_accounts \
             WHERE handle = ? AND date >= ? \
             GROUP BY handle, hashtag \
             ORDER BY occurrences DESC \
@@ -55,7 +55,7 @@ class TwitterManager extends Manager {
 
     async getGroupInsights(name, date) {
         return await TwitterManager._db.getRows(
-            'SELECT * FROM twitter_dailystats_group WHERE name = ? AND date = ?',
+            'SELECT * FROM twitter_dailystats_groups WHERE name = ? AND date = ?',
             [name, date]
         );
     }
