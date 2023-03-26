@@ -118,7 +118,8 @@ Let's see the available APIs at this moment:
 
 ## Getting Started
 
-So that the repository is successfully cloned and the project runs smoothly, a few steps need to be followed.
+So that the repository is successfully cloned and the project runs smoothly, a few steps need to be followed. <br/>
+**N.B.** All used keys and tokens are invalid and have to be re-generated.
 
 ### Requisites
 
@@ -139,7 +140,7 @@ So that the repository is successfully cloned and the project runs smoothly, a f
 
 ### Useful Links
 
-| Title | Link |
+| Container | Link |
 | ----- | ---- |
 | Node-UI | [http://localhost:8080/](http://localhost:8080/) |
 | Grafana-Charts | [https://localhost:3000/](https://localhost:3000/) |
@@ -148,9 +149,8 @@ So that the repository is successfully cloned and the project runs smoothly, a f
 
 - [ ] Add other countries in addition to Italy.
 - [ ] Add other socials (e.g. Instagram).
-- [ ] Add other NLP stats (e.g. Emotion Detection).
 - [ ] Take a look at HTTPS, Domain, Load Balancer & HTTP Server (NGINX), and Host (AWS).
-- [ ] Re-implement front-end using Vue.js or similar.
+- [ ] Re-implement front-end using Vue.js or similar frameworks.
 - [x] Re-design Node.Js back-end to be hybrid with more socials and countries. Design Patterns...
 
 ## License :copyright:
