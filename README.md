@@ -46,16 +46,18 @@ It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **F
 ### Database (MySQL)
 
 The DBMS I have chosen to store all the data is in MySQL, a relational DBMS.<br/>
-Let's see the E-R schema.
+The Logical Schema can be found in ```/docs/imgs/db.png```.<br/>
+Let's see a light version of the E-R schema.
 
 <img src="/docs/uml/db.svg" width="750px"/>
 
 ### UI (Node.js, HTML, CSS, JS)
 
 UI has been implemented using HTML, CSS (Bootstrap), and JS (JQuery). <br/>
-On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL database and returns in JSON format to the front-end what it has asked for.
+On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL database and returns in JSON format to the front-end what it has asked for (or a **404** code in case of error).
 
-Here is illustrated the backend UML:
+Below is illustrated the backend UML.<br/>
+It has to be noticed that ```Manager``` uses a **Factory Method Design Pattern**. 
 
 <img src="/docs/uml/backend.svg" height="570px"/>
 
