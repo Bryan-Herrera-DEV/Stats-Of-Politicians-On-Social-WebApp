@@ -5,8 +5,8 @@ _The idea comes from a university project for the Social Media Management course
 
 ## Introduction
 
-The project aims to make stats about the use of Social Media by Politicians.
-It analyzes any social media, politicians of more countries, of any political group.
+The project aims to make stats about Politicians' use of Social Media.<br/>
+It analyses, for each social media, politicians of any country, belonging to any political group.
 
 ## Structure
 
