@@ -41,7 +41,7 @@ Every day, at **00:00 AM UTC**, it starts a job with three main phases managed b
 Below is illustrated a simplified UML of the crawler. <br/>
 It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **Factory Method Design Pattern**. 
 
-<img src="/docs/uml/crawler.svg" width="750px"/>
+<img src="/docs/uml/crawler.svg" height="600px"/>
 
 ### Database (MySQL)
 
@@ -57,7 +57,7 @@ Let's see a light version of the E-R schema.
 ### UI (Node.js, HTML, CSS, JS)
 
 UI has been implemented using HTML, CSS (Bootstrap), and JS (JQuery). <br/>
-On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL database and returns in JSON format to the front-end what it has asked for (or a **404** code in case of error).
+On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL database and returns in JSON format to the front-end what it has asked for (or an error code).
 
 Below is illustrated the backend UML.<br/>
 It has to be noticed that ```Manager``` uses a **Factory Method Design Pattern**. 
@@ -78,24 +78,25 @@ Let's see the available APIs at this moment:
 
 ## Provided Statistics
 
-- For Twitter:
-  - For Each Account and Political Group:
-    - Total Likes (yesterday)
-    - Total Retweets (yesterday)
-    - Total Replies (yesterday)
-    - Average Likes (yesterday)
-    - Average Retweets (yesterday)
-    - Average Replies (yesterday)
-    - Average Length of a Tweet (in characters)
-    - Average Sentiment Analysis (Positive, Negative, Neutral, Null) (yesterday) <br/><br/>
-    - Charts of Compare Among All Political Groups (followers, likes, etc.)<br/><br/>
-    - Chart with the History of the Number of Analysed Tweets Over Time
-    - Chart with the History of Total Followers Over Time
-    - Chart with the History of Avg Tweets Length Over Time
-    - Chart with the History of Avg Likes Over Time
-    - Chart with the History of Avg Retweets Over Time
-    - Chart with the History of Avg Replies Over Time
-    - Top 5 Most Used Hashtags **(just for accounts)** (last week, last month, last year) 
+### Twitter
+
+- For Each Account and Political Group:
+  - Total Likes (yesterday)
+  - Total Retweets (yesterday)
+  - Total Replies (yesterday)
+  - Average Likes (yesterday)
+  - Average Retweets (yesterday)
+  - Average Replies (yesterday)
+  - Average Length of a Tweet (in characters)
+  - Average Sentiment Analysis **(Positive, Negative, Neutral, Null)** (yesterday) <br/><br/>
+  - Charts of Compare Among All Political Groups (followers, likes, etc.)<br/><br/>
+  - Chart with the History of the Number of Analysed Tweets Over Time
+  - Chart with the History of Total Followers Over Time
+  - Chart with the History of Avg Tweets Length Over Time
+  - Chart with the History of Avg Likes Over Time
+  - Chart with the History of Avg Retweets Over Time
+  - Chart with the History of Avg Replies Over Time
+  - Top 5 Most Used Hashtags **(just for accounts)** (last week, last month, last year) 
     
 
 
