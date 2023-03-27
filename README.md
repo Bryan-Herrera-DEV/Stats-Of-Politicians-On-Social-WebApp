@@ -3,8 +3,6 @@
 _Personal Project for Politicians Analysis._ <br/>
 _The idea comes from a university project for the Social Media Management course._
 
-## Introduction
-
 The project aims to make stats about Politicians' use of Social Media.<br/>
 It analyses, for each social media, politicians of any country, belonging to any political group.
 
