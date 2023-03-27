@@ -9,7 +9,7 @@ from daemon.checker import Checker
 checker = Checker()
 
 while True:
-    if os.environ["IS_RELEASE"] == 1:
+    if int(os.environ["IS_RELEASE"]) == 1:
 
         with open(os.environ["SERVERLIST_PATH"]) as dump:
             for server in full_load(dump)['servers']:
