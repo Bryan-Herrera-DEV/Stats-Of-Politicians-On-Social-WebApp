@@ -14,4 +14,4 @@ datasources:
     jsonData:
       maxOpenConns: 0 
       maxIdleConns: 2 
-      connMaxLifetime: 14400    
+      connMaxLifetime: 14400 

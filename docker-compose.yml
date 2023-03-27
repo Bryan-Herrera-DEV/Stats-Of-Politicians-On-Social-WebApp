@@ -33,7 +33,10 @@ services:
       - mysql-politics
     volumes:
       - grafana-data:/var/lib/grafana
-      - $PWD/grafana-charts/:/etc/grafana/
+      - $PWD/grafana-charts/certs:/etc/grafana/certs
+      - $PWD/grafana-charts/provisioning:/etc/grafana/provisioning
+      - $PWD/grafana-charts/grafana.ini:/etc/grafana/grafana.ini
+      - $PWD/grafana-charts/dashboard.json:/var/lib/grafana/dashboards/dashboard.json
     deploy:
       restart_policy:
         condition: on-failure
