@@ -154,7 +154,7 @@ So that the repository is successfully cloned and the project runs smoothly, a f
 
 - [ ] Add other countries in addition to Italy.
 - [ ] Add other socials (e.g. Instagram).
-- [ ] Take a look at HTTPS, Domain, Load Balancer & HTTP Server (NGINX), and Host (AWS).
+- [x] Take a look at HTTPS, Domain, Load Balancer & HTTP Server (NGINX), and Host (AWS).
 - [ ] Re-implement front-end using Vue.js or similar frameworks.
 - [x] Re-design Node.Js back-end to be hybrid with more socials and countries. Design Patterns...
 
