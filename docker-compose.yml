@@ -107,7 +107,7 @@ services:
       - py-crawler
       - node-ui
     environment:
-      IS_RELEASE: 0
+      IS_RELEASE: 1
       SERVERLIST_PATH: /home/app/health/settings.yml
       CHECK_TIME_SECONDS: 1
       TELEGRAM_TOKEN: '6012596464:AAE5Zg423LgO5dAQdqUTWd834qu9xoIttYA'
