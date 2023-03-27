@@ -124,7 +124,7 @@ Let's see the available APIs at this moment:
 ## Getting Started
 
 So that the repository is successfully cloned and the project runs smoothly, a few steps need to be followed. <br/>
-**N.B.** All used keys and tokens are invalid and have to be re-generated.
+**N.B.** All used keys, tokens, and passwords are invalid and have to be re-generated.
 
 ### Requisites
 
@@ -141,11 +141,7 @@ So that the repository is successfully cloned and the project runs smoothly, a f
    $ git clone https://github.com/antonioscardace/Stats-Of-Politicians-On-Socials-WebApp.git
    $ cd YOUR_PATH/Stats-Of-Politicians-On-Socials-WebApp/
    $ bash run.sh
-``` 
-
-Then, to import the dashboard:
-1. Go to [Grafana Login](https://localhost:3000/login) and sign in.
-2. Go to [Grafana Dashboard Import](https://localhost:3000/dashboard/import) and upload ``/grafana-charts/dashboard.json``.
+```
 
 ### Useful Links
 
