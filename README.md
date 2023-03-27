@@ -3,6 +3,8 @@
 _Personal Project for Politicians Analysis._ <br/>
 _The idea comes from a university project for the Social Media Management course._
 
+[![CodeFactor](https://www.codefactor.io/repository/github/antonioscardace/stats-of-politicians-on-social-webapp/badge/main)](https://www.codefactor.io/repository/github/antonioscardace/system-stats-by-keylogger/overview/main)
+
 The project aims to make stats about Politicians' use of Social Media.<br/>
 It analyses, for each social media, politicians of any country, belonging to any political group.
 
@@ -55,7 +57,7 @@ On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL
 Below is illustrated the backend UML.<br/>
 It has to be noticed that ```Manager``` uses a **Factory Method Design Pattern**. 
 
-<img src="/docs/uml/backend.svg" height="550px"/>
+<img src="/docs/uml/backend.svg" height="500px"/>
 
 Let's see the available APIs at this moment:
 
@@ -132,8 +134,8 @@ So that the repository is successfully cloned and the project runs smoothly, a f
 ### Installation and Use
 
 ```sh
-   $ git clone https://github.com/antonioscardace/Stats-Of-Politicians-On-Socials-WebApp.git
-   $ cd YOUR_PATH/Stats-Of-Politicians-On-Socials-WebApp/
+   $ git clone https://github.com/antonioscardace/Stats-Of-Politicians-On-Social-WebApp.git
+   $ cd YOUR_PATH/Stats-Of-Politicians-On-Social-WebApp/
    $ bash run.sh
 ```
 
@@ -148,8 +150,8 @@ So that the repository is successfully cloned and the project runs smoothly, a f
 
 - [ ] Add other countries in addition to Italy.
 - [ ] Add other socials (e.g. Instagram).
-- [x] Take a look at HTTPS, Domain, Load Balancer & HTTP Server (NGINX), and Host (AWS).
 - [ ] Re-implement front-end using Vue.js or similar frameworks.
+- [x] Take a look at HTTPS, Domain, Load Balancer & HTTP Server (NGINX), and Host (AWS).
 - [x] Re-design Node.Js back-end to be hybrid with more socials and countries. Design Patterns...
 
 ## License :copyright:
