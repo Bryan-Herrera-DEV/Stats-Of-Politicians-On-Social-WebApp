@@ -10,20 +10,14 @@ It analyses, for each social media, politicians of any country, belonging to any
 
 ## Structure
 
-The structure of the project is designed below.
+The structure of the project is designed below.<br/>
 All the components have been created on Docker.
 
-- **Health Checker | Python & YAML**: it checks every second the health of all Docker containers. On error (and online return) it sends notifications on Telegram and-or Slack.
-- **Crawler | Python & YAML**: once a day it reads the YML file (countries, socials, and accounts we have to analyze), fetches all the data, and saves them into the database.
-- **Database | MySQL**: stores all the data sent by the Crawler updated day-by-day.
-- **Charts | Grafana**: it makes and provides a lot of charts with data fetched from the database.
-- **UI | Node.Js, HTML, CSS, JS**: fetches and visualizes (even using Grafana) all the data from the database.
-
-<img src="/docs/imgs/schema.png" width="725px"/>
+<img src="/docs/imgs/schema.png" width="700px"/>
 
 ### Config File (YML)
 
-It is useful to store socials, countries, accounts, and political groups to analyze. <br/>
+It is useful to store socials, countries, accounts, and political groups to analyse. <br/>
 I use a YML file rather than a relational DB because it is easier to update and store.
 
 Here is an example of what it contains:
@@ -48,21 +42,22 @@ It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **F
 The DBMS I have chosen to store all the data is in MySQL, a relational DBMS.<br/>
 The Logical Schema can be found in ```/docs/imgs/db.png```.
 
-In case of an update in MySQL settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``database name``, ``user``, ``password``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is useful to import the data source into Grafana.
+In case of an update in MySQL settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``user``, ``password``, ``database name``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is useful to import the data source into Grafana.
 
 Let's see a light version of the E-R schema.
 
-<img src="/docs/uml/db.svg" width="750px"/>
+<img src="/docs/uml/db.svg" width="700px"/>
 
 ### UI (Node.js, HTML, CSS, JS)
 
 UI has been implemented using HTML, CSS (Bootstrap), and JS (JQuery). <br/>
-On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL database and returns in JSON format to the front-end what it has asked for (or an error code).
+The charts have been generated and managed by Grafana.<br/>
+On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL database and returns in JSON format to the front-end what it has asked for (or an error code ``404``).
 
 Below is illustrated the backend UML.<br/>
 It has to be noticed that ```Manager``` uses a **Factory Method Design Pattern**. 
 
-<img src="/docs/uml/backend.svg" height="570px"/>
+<img src="/docs/uml/backend.svg" height="550px"/>
 
 Let's see the available APIs at this moment:
 
