@@ -13,22 +13,13 @@ It analyses, for each social media, politicians of any country, belonging to any
 The structure of the project is designed below.<br/>
 All the components have been created on Docker.
 
-<img src="/docs/imgs/schema.png" width="700px"/>
+<img src="/docs/imgs/schema.png" width="650px"/>
 
-### Config File (YML)
-
-It is useful to store socials, countries, accounts, and political groups to analyse. <br/>
-I use a YML file rather than a relational DB because it is easier to update and store.
-
-Here is an example of what it contains:
-
-<img src="/docs/imgs/yaml.png" height="380px"/>
-
-### Crawler (Python)
+### Crawler (Python + YAML)
 
 Every day, at **00:00 AM UTC**, it starts a job with three main phases managed by ```Manager```.
 
-- **Reading**: it reads from the YML config file all the info necessary to make stats. Precisely, it contains socials, countries and their respective political groups and accounts we want to analyze. 
+- **Reading**: it reads from the **YAML config file** all the info necessary to make stats. Precisely, it contains socials, countries and their respective political groups and accounts we want to analyse. I have decided to use a YAML file rather than a relational DB because it is easier to update and store.
 - **Fetching & Processing**: for each social and country, it retrieves data for each account for the day that just passed, and it puts them into an ```Account``` object (one for each account). Once made a list of accounts' objects, it instantiates a ```Group``` object. These objects make all the stats required for the last 24hrs.
 - **Saving**: once made all accounts and politics groups' objects associated with a given country on a given social, the data are saved through a ```Helper``` into a database.
 
@@ -57,7 +48,7 @@ On request, via REST APIs using **AJAX**, the **Node.js** back-end connects to t
 Below is illustrated the backend UML.<br/>
 It has to be noticed that ```Manager``` uses a **Factory Method Design Pattern**. 
 
-<img src="/docs/uml/backend.svg" height="500px"/>
+<img src="/docs/uml/backend.svg" height="475px"/>
 
 Let's see the available APIs at this moment:
 
