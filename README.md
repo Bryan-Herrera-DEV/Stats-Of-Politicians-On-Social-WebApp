@@ -50,9 +50,9 @@ Let's see a light version of the E-R schema.
 
 ### UI (Node.js, HTML, CSS, JS)
 
-UI has been implemented using HTML, CSS (Bootstrap), and JS (JQuery). <br/>
-The charts have been generated and managed by Grafana.<br/>
-On request, via REST APIs using AJAX, the Node.js back-end connects to the MySQL database and returns in JSON format to the front-end what it has asked for (or an error code ``404``).
+UI has been implemented using **HTML**, **CSS (Bootstrap)**, and **JS (JQuery)**. <br/>
+The charts have been generated and managed by **Grafana**.<br/>
+On request, via REST APIs using **AJAX**, the **Node.js** back-end connects to the MySQL database and returns in **JSON** format to the front-end what it has asked for (or an error code ``404``).
 
 Below is illustrated the backend UML.<br/>
 It has to be noticed that ```Manager``` uses a **Factory Method Design Pattern**. 
@@ -70,6 +70,16 @@ Let's see the available APIs at this moment:
 ``/api/:social/accounts/:handle/info``: gets yesterday info about _:handle_.<br/>
 ``/api/:social/accounts/:handle/insights``: gets yesterday insights about _:handle_.<br/>
 ``/api/:social/accounts/:handle/hashtags/:since/:limit``: gets top _:limit_ used hashtags by _:handle_ since _:since_.<br/>
+
+### Containers Health Checker (Python + YML)
+
+To constantly check the health of all the containers, I have implemented a basic health checker. <br/>
+It has been implemented in **Python**, and reads IP addresses and contacts from a **YAML Config file**.<br/>
+Now, it is able to send messages to **Telegram** Channels and **Slack** Channels/Contacts.
+
+Let's see how the config file looks like: 
+
+<img src="/docs/imgs/yaml-checker.png"/>
 
 ## Provided Statistics
 
