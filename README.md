@@ -50,8 +50,8 @@ Let's see a light version of the E-R schema.
 
 ### UI (Node.js, HTML, CSS, JS)
 
-UI has been implemented using **HTML**, **CSS (Bootstrap)**, and **JS (JQuery)**. <br/>
 The charts have been generated and managed by **Grafana**.<br/>
+UI has been implemented using **HTML**, **CSS (Bootstrap)**, and **JS (JQuery)**. <br/>
 On request, via REST APIs using **AJAX**, the **Node.js** back-end connects to the MySQL database and returns in **JSON** format to the front-end what it has asked for (or an error code ``404``).
 
 Below is illustrated the backend UML.<br/>
@@ -92,7 +92,7 @@ Let's see how the config file looks like:
   - Average Likes (yesterday)
   - Average Retweets (yesterday)
   - Average Replies (yesterday)
-  - Average Length of a Tweet (in characters)
+  - Average Length of a Tweet **(in characters)** (yesterday)
   - Average Sentiment Analysis **(Positive, Negative, Neutral, Null)** (yesterday) <br/><br/>
   - Charts of Compare Among All Political Groups (followers, likes, etc.)<br/><br/>
   - Chart with the History of the Number of Analysed Tweets Over Time
