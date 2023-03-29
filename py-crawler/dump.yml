@@ -49,7 +49,7 @@ ITA_twitter_accounts:
       handle: cucchi_ilaria
       group: AVS
 
-  - account: 
+  - account:
       handle: GiuseppeConteIT
       group: M5S
   - account:
@@ -68,113 +68,113 @@ ITA_twitter_accounts:
       handle: BaldinoVittoria
       group: M5S
 
-  - account: 
+  - account:
       handle: ellyesse
       group: PD-IDP
-  - account: 
+  - account:
       handle: lauraboldrini
       group: PD-IDP
-  - account: 
+  - account:
       handle: dariofrance
       group: PD-IDP
-  - account: 
+  - account:
       handle: AndreaOrlandosp
       group: PD-IDP
-  - account: 
+  - account:
       handle: robersperanza
       group: PD-IDP
-  - account: 
+  - account:
       handle: serracchiani
       group: PD-IDP
-  - account: 
+  - account:
       handle: BeaLorenzin
       group: PD-IDP
 
-  - account: 
+  - account:
       handle: CarloCalenda
       group: AZ-IV-RE
-  - account: 
+  - account:
       handle: matteorenzi
       group: AZ-IV-RE
-  - account: 
+  - account:
       handle: meb
       group: AZ-IV-RE
-  - account: 
+  - account:
       handle: mara_carfagna
       group: AZ-IV-RE
-  - account: 
+  - account:
       handle: msgelmini
       group: AZ-IV-RE
-  - account: 
+  - account:
       handle: ivanscalfarotto
       group: AZ-IV-RE
-  - account: 
+  - account:
       handle: marattin
       group: AZ-IV-RE
 
-  - account: 
+  - account:
       handle: berlusconi
       group: FI-PPE
-  - account: 
+  - account:
       handle: Antonio_Tajani
       group: FI-PPE
-  - account: 
+  - account:
       handle: gasparripdl
       group: FI-PPE
-  - account: 
+  - account:
       handle: giorgiomule
       group: FI-PPE
-  - account: 
+  - account:
       handle: LiciaRonzulli
       group: FI-PPE
-  - account: 
+  - account:
       handle: Min_Casellati
       group: FI-PPE
-  - account: 
+  - account:
       handle: aleCattaneo79
       group: FI-PPE
     
-  - account: 
+  - account:
       handle: matteosalvinimi
       group: LEGA
-  - account: 
+  - account:
       handle: MolinariRik
       group: LEGA
-  - account: 
+  - account:
       handle: Fontana3Lorenzo
       group: LEGA
-  - account: 
+  - account:
       handle: borghi_claudio
       group: LEGA
-  - account: 
+  - account:
       handle: lauraravetto
       group: LEGA
-  - account: 
+  - account:
       handle: giamma71
       group: LEGA
 
-  - account: 
+  - account:
       handle: Maurizio_Lupi
       group: NM
 
-  - account: 
+  - account:
       handle: GiorgiaMeloni
       group: FDI
-  - account: 
+  - account:
       handle: Donzelli
       group: FDI
-  - account: 
+  - account:
       handle: DSantanche
       group: FDI
-  - account: 
+  - account:
       handle: Ignazio_LaRussa
       group: FDI
-  - account: 
+  - account:
       handle: grotondi
       group: FDI
-  - account: 
+  - account:
       handle: LucioMalan
       group: FDI
-  - account: 
+  - account:
       handle: Nello_Musumeci
       group: FDI
