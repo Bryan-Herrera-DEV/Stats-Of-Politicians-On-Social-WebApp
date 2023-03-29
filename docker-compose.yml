@@ -64,7 +64,7 @@ services:
       MYSQL_PORT: 3306
       MYSQL_USER: root
       MYSQL_PSW: Jm9Ca9Sh6
-      MYSQL_DB: politics_stats    
+      MYSQL_DB: politics_stats
 
   #-----------------------#
   #        NodeJS         #
@@ -93,7 +93,7 @@ services:
   #-----------------------#
   # Python Health Checker #
   #-----------------------#
-    
+
   py-health:
     image: python:3.8-alpine
     container_name: py-health
