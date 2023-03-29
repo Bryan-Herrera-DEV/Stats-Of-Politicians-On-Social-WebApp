@@ -36,25 +36,10 @@ Let's see a light version of the E-R schema:
 
 <img src="/docs/uml/db.svg" width="700px"/>
 
-### Charts (Grafana)
-
-The charts have been created and managed using **Grafana**.<br/>
-I have generated **HTTPS certifications** to allow a secure connection.<br/>
-Furthermore, I have set Grafana to be modifiable just by the admin (username and password are necessary).
-
-In case of an update in MySQL settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``user``, ``password``, ``database name``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is useful to import the data source into Grafana.
-
-**Datasource** and **Dashboard** are automatically imported.
-
 ### UI (Node.js, HTML, CSS, JS)
 
 UI has been implemented using **HTML**, **CSS (Bootstrap)**, and **JS (JQuery)**. <br/>
 On request, via REST APIs using **AJAX**, the **Node.js** back-end connects to the MySQL database and returns in **JSON** format to the front-end what it has asked for (or an error code ``404``).
-
-Below is illustrated the backend UML.<br/>
-It has to be noticed that ```Manager``` uses a **Factory Method Design Pattern**. 
-
-<img src="/docs/uml/backend.svg" height="475px"/>
 
 Let's see the available APIs at this moment:
 
@@ -66,7 +51,25 @@ Let's see the available APIs at this moment:
 ``/api/:social/accounts/:group/all``: gets all accounts of _:group_ analysed yesterday.<br/>
 ``/api/:social/accounts/:handle/info``: gets yesterday info about _:handle_.<br/>
 ``/api/:social/accounts/:handle/insights``: gets yesterday insights about _:handle_.<br/>
-``/api/:social/accounts/:handle/hashtags/:since/:limit``: gets top _:limit_ used hashtags by _:handle_ since _:since_.<br/>
+``/api/:social/accounts/:handle/hashtags/:since/:limit``: gets top _:limit_ used hashtags by _:handle_ since _:since_.
+
+Below is illustrated the backend UML.<br/>
+It has to be noticed that ```Manager``` uses a sort of **Factory Method Design Pattern**. 
+
+<img src="/docs/uml/backend.svg" height="475px"/>
+
+### Charts (Grafana)
+
+The charts have been created and managed using **Grafana**.<br/>
+I have generated **HTTPS certifications** to allow a secure connection.<br/>
+Furthermore, I have set Grafana to be modifiable just by the admin (username and password are necessary).
+
+In case of an update in MySQL settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``user``, ``password``, ``database name``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is useful to import the data source into Grafana.
+
+**Datasource** and **Dashboard** are automatically imported.<br/>
+**Dashboard Panels** are embedded in the UI through specific ``<iframe>``.
+
+<img src="/docs/imgs/grafana.png" width="700px"/>
 
 ### Containers Health Checker (Python + YML)
 
@@ -100,8 +103,6 @@ Let's see how the config file looks like:
   - Chart with the History of Avg Replies Over Time
   - Top 5 Most Used Hashtags **(just for accounts)** (last week, last month, last year) 
     
-
-
 ## Light Demo
 
 ![Screen 1](/docs/snaps/screen-0.png)
