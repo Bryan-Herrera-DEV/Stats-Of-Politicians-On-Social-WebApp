@@ -109,27 +109,25 @@ Let's see how the config file looks like:
 ---
 ![Screen 2](/docs/snaps/screen-1.png)
 ---
-![Screen 3](/docs/snaps/screen-2.png)
+![Screen 3](/docs/snaps/screen-3.png)
 ---
-![Screen 4](/docs/snaps/screen-3.png)
----
-![Screen 5](/docs/snaps/screen-4.png)
+![Screen 4](/docs/snaps/screen-4.png)
 ***
-![Screen 6](/docs/snaps/screen-5.png)
+![Screen 5](/docs/snaps/screen-5.png)
 ---
-![Screen 7](/docs/snaps/screen-6.png)
+![Screen 6](/docs/snaps/screen-6.png)
 ---
-![Screen 8](/docs/snaps/screen-7.png)
+![Screen 7](/docs/snaps/screen-7.png)
 ---
-![Screen 9](/docs/snaps/screen-8.png)
+![Screen 8](/docs/snaps/screen-8.png)
 ---
-![Screen 10](/docs/snaps/screen-9.png)
+![Screen 9](/docs/snaps/screen-9.png)
 ***
-![Screen 11](/docs/snaps/screen-10.png)
+![Screen 10](/docs/snaps/screen-10.png)
 ---
-![Screen 12](/docs/snaps/screen-11.png)
+![Screen 11](/docs/snaps/screen-11.png)
 ***
-![Screen 13](/docs/snaps/screen-12.png)
+![Screen 12](/docs/snaps/screen-12.png)
 
 ## Getting Started
 
