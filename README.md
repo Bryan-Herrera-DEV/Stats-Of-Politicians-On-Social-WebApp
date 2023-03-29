@@ -64,7 +64,7 @@ The charts have been created and managed using **Grafana**.<br/>
 I have generated **HTTPS certifications** to allow a secure connection.<br/>
 Furthermore, I have set Grafana to be modifiable just by the admin (username and password are necessary).
 
-In case of an update in MySQL settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``user``, ``password``, ``database name``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is useful to import the data source into Grafana.
+In case of an update in **MySQL** settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``user``, ``password``, ``database name``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is useful to import the data source into Grafana.
 
 **Datasource** and **Dashboard** are automatically imported.<br/>
 **Dashboard Panels** are embedded in the UI through specific ``<iframe>``.
@@ -109,21 +109,27 @@ Let's see how the config file looks like:
 ---
 ![Screen 2](/docs/snaps/screen-1.png)
 ---
-![Screen 3](/docs/snaps/screen-3.png)
+![Screen 3](/docs/snaps/screen-2.png)
 ---
-![Screen 4](/docs/snaps/screen-4.png)
+![Screen 4](/docs/snaps/screen-3.png)
+---
+![Screen 5](/docs/snaps/screen-4.png)
 ***
-![Screen 5](/docs/snaps/screen-5.png)
+![Screen 6](/docs/snaps/screen-5.png)
 ---
-![Screen 6](/docs/snaps/screen-6.png)
+![Screen 7](/docs/snaps/screen-6.png)
 ---
-![Screen 7](/docs/snaps/screen-7.png)
+![Screen 8](/docs/snaps/screen-7.png)
 ---
-![Screen 8](/docs/snaps/screen-8.png)
+![Screen 9](/docs/snaps/screen-8.png)
+---
+![Screen 10](/docs/snaps/screen-9.png)
 ***
-![Screen 9](/docs/snaps/screen-10.png)
+![Screen 11](/docs/snaps/screen-10.png)
 ---
-![Screen 10](/docs/snaps/screen-11.png)
+![Screen 12](/docs/snaps/screen-11.png)
+***
+![Screen 13](/docs/snaps/screen-12.png)
 
 ## Getting Started
 
@@ -159,7 +165,6 @@ So that the repository is successfully cloned and the project runs smoothly, a f
 - [ ] Add other countries in addition to Italy.
 - [ ] Add other socials (e.g. Instagram).
 - [ ] Re-implement front-end using Vue.js or similar frameworks.
-- [x] Take a look at HTTPS, Domain, Load Balancer & HTTP Server (NGINX), and Host (AWS).
 - [x] Re-design Node.Js back-end to be hybrid with more socials and countries. Design Patterns...
 
 ## License :copyright:
