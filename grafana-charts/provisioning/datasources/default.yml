@@ -12,6 +12,6 @@ datasources:
     secureJsonData:
       password: Jm9Ca9Sh6
     jsonData:
-      maxOpenConns: 0 
-      maxIdleConns: 2 
-      connMaxLifetime: 14400 
+      maxOpenConns: 0
+      maxIdleConns: 2
+      connMaxLifetime: 14400
