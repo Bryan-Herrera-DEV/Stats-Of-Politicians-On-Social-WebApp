@@ -30,18 +30,24 @@ It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **F
 
 ### Database (MySQL)
 
-The DBMS I have chosen to store all the data is in MySQL, a relational DBMS.<br/>
-The Logical Schema can be found in ```/docs/imgs/db.png```.
-
-In case of an update in MySQL settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``user``, ``password``, ``database name``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is useful to import the data source into Grafana.
-
-Let's see a light version of the E-R schema.
+MySQL, a relational DBMS, is the DBMS I have chosen to store all the data. It is easy and fast.<br/>
+The Logical Schema can be found in ```/docs/imgs/db.png```.<br/>
+Let's see a light version of the E-R schema:
 
 <img src="/docs/uml/db.svg" width="700px"/>
 
+### Charts (Grafana)
+
+The charts have been created and managed using **Grafana**.<br/>
+I have generated **HTTPS certifications** to allow a secure connection.<br/>
+Furthermore, I have set Grafana to be modifiable just by the admin (username and password are necessary).
+
+In case of an update in MySQL settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``user``, ``password``, ``database name``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is useful to import the data source into Grafana.
+
+**Datasource** and **Dashboard** are automatically imported.
+
 ### UI (Node.js, HTML, CSS, JS)
 
-The charts have been generated and managed by **Grafana**.<br/>
 UI has been implemented using **HTML**, **CSS (Bootstrap)**, and **JS (JQuery)**. <br/>
 On request, via REST APIs using **AJAX**, the **Node.js** back-end connects to the MySQL database and returns in **JSON** format to the front-end what it has asked for (or an error code ``404``).
 
