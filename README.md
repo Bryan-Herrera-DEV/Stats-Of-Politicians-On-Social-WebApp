@@ -26,7 +26,7 @@ Every day, at **00:00 AM UTC**, it starts a job with three main phases managed b
 Below is illustrated a simplified UML of the crawler. <br/>
 It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **Factory Method Design Pattern**. 
 
-<img src="/docs/uml/crawler.svg" height="600px"/>
+<img src="/docs/uml/crawler.svg" height="500px"/>
 
 ### Database (MySQL)
 
@@ -34,7 +34,7 @@ MySQL, a relational DBMS, is the DBMS I have chosen to store all the data. It is
 The Logical Schema can be found in ```/docs/imgs/db.png```.<br/>
 Let's see a light version of the E-R schema:
 
-<img src="/docs/uml/db.svg" width="700px"/>
+<img src="/docs/uml/db.svg" width="650px"/>
 
 ### UI (Node.js, HTML, CSS, JS)
 
@@ -56,7 +56,7 @@ Let's see the available APIs at this moment:
 Below is illustrated the backend UML.<br/>
 It has to be noticed that ```Manager``` uses a sort of **Factory Method Design Pattern**. 
 
-<img src="/docs/uml/backend.svg" height="475px"/>
+<img src="/docs/uml/backend.svg" height="450px"/>
 
 ### Charts (Grafana)
 
