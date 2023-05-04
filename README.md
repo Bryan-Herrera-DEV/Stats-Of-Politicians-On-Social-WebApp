@@ -11,7 +11,7 @@ It analyses, for each social media, politicians of any country, belonging to any
 ## Structure
 
 The structure of the project is designed below.<br/>
-All the components have been created on Docker.
+All the components have been created on **Docker**.
 
 <img src="/docs/imgs/schema.png" width="650px"/>
 
@@ -38,7 +38,7 @@ Let's see a light version of the E-R schema:
 
 ### UI (Node.js, HTML, CSS, JS)
 
-UI has been implemented using **HTML**, **CSS (Bootstrap)**, and **JS (JQuery)**. <br/>
+UI has been implemented using **HTML**, **CSS**, **Bootstrap**, and **JS (with JQuery)**. <br/>
 On request, via REST APIs using **AJAX**, the **Node.js** back-end connects to the MySQL database and returns in **JSON** format to the front-end what it has asked for (or an error code ``404``).
 
 Let's see the available APIs at this moment:
@@ -54,7 +54,7 @@ Let's see the available APIs at this moment:
 ``/api/:social/accounts/:handle/hashtags/:since/:limit``: gets top _:limit_ used hashtags by _:handle_ since _:since_.
 
 Below is illustrated the backend UML.<br/>
-It has to be noticed that ```Manager``` uses a sort of **Factory Method Design Pattern**. 
+It has to be noticed that ```Manager``` implement a sort of **Factory Method Design Pattern**. 
 
 <img src="/docs/uml/backend.svg" height="450px"/>
 
@@ -62,12 +62,12 @@ It has to be noticed that ```Manager``` uses a sort of **Factory Method Design P
 
 The charts have been created and managed using **Grafana**.<br/>
 I have generated **HTTPS certifications** to allow a secure connection.<br/>
-Furthermore, I have set Grafana to be modifiable just by the admin (username and password are necessary).
+Furthermore, I have set Grafana to be accessible just by the admin (username and password are required).
 
 In case of an update in **MySQL** settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``user``, ``password``, ``database name``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is useful to import the data source into Grafana.
 
 **Datasource** and **Dashboard** are automatically imported.<br/>
-**Dashboard Panels** are embedded in the UI through specific ``<iframe>``.
+**Dashboard Panels** are embedded in the UI through specific ``<iframe>`` tags.
 
 <img src="/docs/imgs/grafana.png" width="700px"/>
 
