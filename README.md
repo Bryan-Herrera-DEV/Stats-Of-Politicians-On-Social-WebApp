@@ -13,7 +13,7 @@ It analyses, for each social media, politicians of any country belonging to any 
 The structure of the project is designed below.<br/>
 All the components have been created on **Docker**.
 
-<img src="/docs/imgs/model.png" width="650px"/>
+<img src="/docs/imgs/template.png" width="650px"/>
 
 ### Crawler (Python + YAML)
 
