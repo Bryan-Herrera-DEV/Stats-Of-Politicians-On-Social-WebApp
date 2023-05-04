@@ -64,7 +64,7 @@ The charts have been created and managed using **Grafana**.<br/>
 I have generated **HTTPS certifications** to allow a secure connection.<br/>
 Furthermore, I have set Grafana to be accessible just by the admin (username and password are required).
 
-In case of an update in **MySQL** settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``user``, ``password``, ``database name``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is helpful to import the data source into Grafana.
+In case of an update in **MySQL** settings (environment variables in ``docker-compose.yml``: ``host``, ``port``, ``user``, ``password``, ``database name``), you must update ``/grafana-charts/provisioning/datasources/default.yml`` to import the data source into Grafana.
 
 **Datasource** and **Dashboard** are automatically imported.<br/>
 **Dashboard Panels** are embedded in the UI through specific ``<iframe>`` tags.
