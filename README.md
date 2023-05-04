@@ -6,7 +6,7 @@ _The idea comes from a university project for the Social Media Management course
 [![CodeFactor](https://www.codefactor.io/repository/github/antonioscardace/stats-of-politicians-on-social-webapp/badge/main)](https://www.codefactor.io/repository/github/antonioscardace/system-stats-by-keylogger/overview/main)
 
 The project aims to make stats about Politicians' use of Social Media.<br/>
-It analyses, for each social media, politicians of any country, belonging to any political group.
+It analyses, for each social media, politicians of any country belonging to any political group.
 
 ## Structure
 
@@ -20,11 +20,11 @@ All the components have been created on **Docker**.
 Every day, at **00:00 AM UTC**, it starts a job with three main phases managed by ```Manager```.
 
 - **Reading**: it reads from the **YAML config file** all the info necessary to make stats. Precisely, it contains socials, countries and their respective political groups and accounts we want to analyse. I have decided to use a YAML file rather than a relational DB because it is easier to update and store.
-- **Fetching & Processing**: for each social and country, it retrieves data for each account for the day that just passed, and it puts them into an ```Account``` object (one for each account). Once made a list of accounts' objects, it instantiates a ```Group``` object. These objects make all the stats required for the last 24hrs.
-- **Saving**: once made all accounts and politics groups' objects associated with a given country on a given social, the data are saved through a ```Helper``` into a database.
+- **Fetching & Processing**: for each social and country, it retrieves data for each account for the last 24hrs and puts them into an Account object (one for each account). Once constructed a list of accounts' objects, it instantiates a Group object. These objects make all the stats required for the last 24hrs.
+- **Saving**: once made all accounts and political groups' objects associated with a given country on a given social, the data are saved through a ```Helper``` into a database.
 
 Below is illustrated a simplified UML of the crawler. <br/>
-It has to be noticed that ```Account```, ```Group```, and ```Helper``` use a **Factory Method Design Pattern**. 
+It has to be noted that ```Account```, ```Group```, and ```Helper``` use a **Factory Method Design Pattern**. 
 
 <img src="/docs/uml/crawler.svg" height="500px"/>
 
@@ -64,7 +64,7 @@ The charts have been created and managed using **Grafana**.<br/>
 I have generated **HTTPS certifications** to allow a secure connection.<br/>
 Furthermore, I have set Grafana to be accessible just by the admin (username and password are required).
 
-In case of an update in **MySQL** settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``user``, ``password``, ``database name``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is useful to import the data source into Grafana.
+In case of an update in **MySQL** settings (environments variables in ``docker-compose.yml``: ``host``, ``port``, ``user``, ``password``, ``database name``), don't forget to update ``/grafana-charts/provisioning/datasources/default.yml``, which is helpful to import the data source into Grafana.
 
 **Datasource** and **Dashboard** are automatically imported.<br/>
 **Dashboard Panels** are embedded in the UI through specific ``<iframe>`` tags.
@@ -73,9 +73,9 @@ In case of an update in **MySQL** settings (environments variables in ``docker-c
 
 ### Containers Health Checker (Python + YML)
 
-To constantly check the health of all the containers, I have implemented a basic health checker. <br/>
-It has been implemented in **Python**, and reads IP addresses and contacts from a **YAML Config file**.<br/>
-Now, it is able to send messages to **Telegram** Channels and **Slack** Channels/Contacts.
+I have implemented a basic health checker for all the containers. <br/>
+It has been implemented in **Python** and reads IP addresses and contacts from a **YAML Config file**.<br/>
+Now, it can send messages to **Telegram** channels and **Slack** channels/contacts.
 
 Let's see how the config file looks like: 
 
