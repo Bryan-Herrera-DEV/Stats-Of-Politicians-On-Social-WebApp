@@ -10,7 +10,6 @@ checker = Checker()
 
 while True:
     if int(os.environ["IS_RELEASE"]) == 1:
-
         with open(os.environ["SERVERLIST_PATH"]) as dump:
             for server in full_load(dump)['servers']:
                 checker.scan_server(
