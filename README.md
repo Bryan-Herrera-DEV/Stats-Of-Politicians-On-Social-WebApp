@@ -71,16 +71,6 @@ In case of an update in **MySQL** settings (environment variables in ``docker-co
 
 <img src="/docs/imgs/grafana.png" width="700px"/>
 
-### Containers Health Checker (Python + YML)
-
-I have implemented a basic health checker for all the containers. <br/>
-It has been implemented in **Python** and reads IP addresses and contacts from a **YAML Config file**.<br/>
-Now, it can send messages to **Telegram** channels and **Slack** channels/contacts.
-
-Let's see how the config file looks like: 
-
-<img src="/docs/imgs/yaml-checker.png"/>
-
 ## Provided Statistics
 
 ### Twitter
@@ -138,8 +128,7 @@ So that the repository is successfully cloned and the project runs smoothly, a f
 
 * A stable internet connection. 
 * Use of Linux, MacOS, or Windows WSL.
-* Having a Twitter Developer Account with related keys and tokens (for Twitter).
-* Having a Telegram Bot (with a related channel) or a Slack WebHook.
+* Having a Twitter Developer Account with related keys and tokens (for Twitter Analysis).
 * Need to download and install [Docker](https://docs.docker.com/get-docker/) ([Docker Desktop](https://www.docker.com/products/docker-desktop/) is recommended).
 * The use of [Visual Studio Code](https://code.visualstudio.com/download) is strongly recommended for modify.
 
@@ -160,10 +149,10 @@ So that the repository is successfully cloned and the project runs smoothly, a f
 
 ## To Do Improvements
 
+- [x] Re-design Node.Js back-end to be hybrid with more socials and countries. Design Patterns.
 - [ ] Add other countries in addition to Italy.
 - [ ] Add other socials (e.g. Instagram).
 - [ ] Re-implement front-end using Vue.js or similar frameworks.
-- [x] Re-design Node.Js back-end to be hybrid with more socials and countries. Design Patterns...
 
 ## License :copyright:
 
