@@ -23,7 +23,7 @@ class TwitterAccount(Account):
                 info = twitter.get_user_info_by_handle(self.username)
                 tweets = twitter.get_user_tweets_within_dates(info['id'], start_time, end_time)
                 break
-            except:
+            except Exception:
                 print('Too much requests on Twitter APIs. Wait 3 mins.', flush=True)
                 sleep(180)
 
