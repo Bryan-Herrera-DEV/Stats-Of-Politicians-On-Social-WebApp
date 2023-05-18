@@ -23,7 +23,7 @@ class MySql(RelationalDatabase):
     def __execute(self, sql, data = [], is_select=False):
         self._connect()
         curs = self._conn.cursor(buffered=True)
-        curs.execute(sql, data)
+        curs.execute(MySQLdb.escape_string(sql), data)
 
         self._conn.commit()
         result = curs.fetchall() if is_select else curs.rowcount
