@@ -59,7 +59,7 @@ services:
       - mysql-politics
     environment:
       DUMP_PATH: /home/app/crawler/dump.yml
-      TWITTER_BEARER: AAAAAAAAAAAAAAAAAAAAAOPAlgEAAAAAY8QaIwGnXCJuPPGPo3NqSJc4apc%3DzU73mVa5pD1MtNr6WhBZkBHsYs8VjkPFwHwhxdSlL2Q5kCVUIU
+      TWITTER_BEARER: ${{ secrets.twitterBearerToken }}
       MYSQL_HOST: mysql-politics
       MYSQL_PORT: 3306
       MYSQL_USER: root
@@ -89,28 +89,6 @@ services:
       MYSQL_USER: root
       MYSQL_PSW: Jm9Ca9Sh6
       MYSQL_DB: politics_stats
-
-  #-----------------------#
-  # Python Health Checker #
-  #-----------------------#
-
-  py-health:
-    image: python:3.8-alpine
-    container_name: py-health
-    working_dir: /home/app/health/
-    restart: unless-stopped
-    command: sh -c "pip install pyyaml requests slack-sdk && python3 -B ./"
-    volumes:
-      - $PWD/py-health/:/home/app/health/
-    depends_on:
-      - mysql-politics
-      - py-crawler
-      - node-ui
-    environment:
-      IS_RELEASE: 1
-      SERVERLIST_PATH: /home/app/health/settings.yml
-      CHECK_TIME_SECONDS: 1
-      TELEGRAM_TOKEN: '6012596464:AAE5Zg423LgO5dAQdqUTWd834qu9xoIttYA'
 
 volumes:
   mysql-politics-data:
