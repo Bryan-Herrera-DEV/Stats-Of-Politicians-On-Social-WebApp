@@ -30,7 +30,6 @@ It has to be noted that ```Account```, ```Group```, and ```Helper``` use a **Fac
 
 ### Database (MySQL)
 
-MySQL, a relational DBMS, is the DBMS I have chosen to store all the data. It is easy and fast.<br/>
 The Logical Schema can be found in ```/docs/imgs/db.png```.<br/>
 Let's see a light version of the E-R schema:
 
@@ -43,18 +42,18 @@ On request, via REST APIs using **AJAX**, the **Node.js** back-end connects to t
 
 Let's see the available APIs at this moment:
 
-``/api/countries``: gets all countries analysed yesterday.<br/>
-``/api/:country/groups``: gets all _:country_'s political groups analysed yesterday.<br/>
-``/api/:country/:social/accounts``: gets all _:country_'s accounts analysed yesterday.<br/><br/>
-``/api/:social/groups/:group/info``: gets yesterday info about _:group_.<br/>
-``/api/:social/groups/:group/insights``: gets yesterday insights about _:group_.<br/><br/>
-``/api/:social/accounts/:group/all``: gets all accounts of _:group_ analysed yesterday.<br/>
-``/api/:social/accounts/:handle/info``: gets yesterday info about _:handle_.<br/>
-``/api/:social/accounts/:handle/insights``: gets yesterday insights about _:handle_.<br/>
-``/api/:social/accounts/:handle/hashtags/:since/:limit``: gets top _:limit_ used hashtags by _:handle_ since _:since_.
+``/api/countries``<br/>
+``/api/:country/groups``<br/>
+``/api/:country/:social/accounts``<br/><br/>
+``/api/:social/groups/:group/info``<br/>
+``/api/:social/groups/:group/insights``<br/><br/>
+``/api/:social/accounts/:group/all``<br/>
+``/api/:social/accounts/:handle/info``<br/>
+``/api/:social/accounts/:handle/insights``<br/>
+``/api/:social/accounts/:handle/hashtags/:since/:limit`` (_:since_ is among 'w', 'm', or 'y').
 
 Below is illustrated the backend UML.<br/>
-It has to be noticed that ```Manager``` implement a sort of **Factory Method Design Pattern**. 
+It has to be noticed that ```Manager```implements a sort of **Factory Method Design Pattern**. 
 
 <img src="/docs/uml/backend.svg" height="450px"/>
 
@@ -107,11 +106,7 @@ In case of an update in **MySQL** settings (environment variables in ``docker-co
 ---
 ![Screen 6](/docs/snaps/screen-6.png)
 ---
-![Screen 7](/docs/snaps/screen-7.png)
----
 ![Screen 8](/docs/snaps/screen-8.png)
----
-![Screen 9](/docs/snaps/screen-9.png)
 ***
 ![Screen 10](/docs/snaps/screen-10.png)
 ---
